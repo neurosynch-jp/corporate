@@ -124,6 +124,11 @@
     "info_url_label": "URL",
     "info_url_value": "neuralpartner.co.jp"
   },
+  "nagoya": {
+    "label": "NAGOYA",
+    "slogan": "Strengthening Japan's economy from Nagoya.",
+    "body": "The Chubu region is one of Japan's largest economic zones, with a GDP of approximately ¥90 trillion. Built on a foundation of manufacturing led by Toyota, the region encompasses diverse industries including aerospace, logistics, and food production. Yet the small and medium-sized enterprises at the heart of this economy face three persistent challenges: chronic labour shortages, operational inefficiency, and slow digital adoption.\n\nNagoya sits at the geographic centre of the Japanese archipelago, placing Tokyo, Osaka, Kyoto, Hiroshima, and Fukuoka all within a few hours by Shinkansen. This strategic location makes it an ideal base for supporting SMEs across the entire country.\n\nNeural Partner aims to deliver AI to SMEs across the Chubu region — and beyond — strengthening Japan's economy from the ground up."
+  },
   "careers": {
     "label": "CAREERS",
     "title": "Careers",

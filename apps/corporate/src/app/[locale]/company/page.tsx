@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 import { getStory } from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
-import {renderRichText} from "@storyblok/react";
+import {renderRichText} from "@storyblok/react"
+import NagoyaSection from '@/components/sections/NagoyaSection'
 
 type CompanyContent = {
     representative_quote: string
@@ -174,6 +175,9 @@ yy                                <div
                     </div>
                 </div>
             </section>
+
+            {/* 名古屋セクション */}
+            <NagoyaSection />
 
             {/* 会社情報テーブル */}
             <section className="py-24 px-16 bg-[#f7f8fa] border-t border-[#dde2ea]">
