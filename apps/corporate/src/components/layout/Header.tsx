@@ -45,7 +45,7 @@ export default function Header() {
                     onClick={() => setMenuOpen(false)}
                     className="font-outfit font-bold text-lg tracking-wide text-[#0f1923] no-underline"
                 >
-                    NEURAL<span className="text-[#00a87a]">.</span>PARTNER
+                    neurosynch
                 </Link>
 
                 {/* PC：ナビリンク */}

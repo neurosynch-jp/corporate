@@ -6,7 +6,7 @@
     "contact": "Free Consultation"
   },
   "hero": {
-    "eyebrow": "NEURAL PARTNER — AI AGENT SOLUTION",
+    "eyebrow": "NEUROSYNCH — AI AGENT SOLUTION",
     "headline1": "Bringing Advanced",
     "headline2": "Technology to SMEs.",
     "cta_primary": "Book a Free Consultation",
@@ -18,7 +18,7 @@
     "stat2_num": "¥2M+",
     "stat2_label": "minimum cost when requesting\na typical system development firm",
     "stat3_num": "¥300K",
-    "stat3_label": "Neural Partner's\nAI Agent introductory price"
+    "stat3_label": "Neurosynch's\nAI Agent introductory price"
   },
   "problem": {
     "label": "THE PROBLEM",
@@ -48,12 +48,12 @@
   },
   "footer": {
     "privacy": "Privacy Policy",
-    "copyright": "© 2026 Neural Partner Co., Ltd."
+    "copyright": "© 2026 Neurosynch Co., Ltd."
   },
   "services": {
     "label": "SERVICES",
     "title": "Transform your operations\nwith AI.",
-    "lead": "No expensive system development required. Neural Partner accompanies you responsibly from AI agent deployment through to operational adoption.",
+    "lead": "No expensive system development required. Neurosynch accompanies you responsibly from AI agent deployment through to operational adoption.",
     "main_label": "MAIN SERVICE",
     "price_badge": "Early Adoption Special Price",
     "price_from": "¥500,000",
@@ -62,8 +62,8 @@
     "maintenance_label": "Annual Maintenance (optional)",
     "maintenance_price": "¥30,000 / year",
     "maintenance_desc": "Includes email support, bug fixes, and security updates. Feature additions and changes are quoted separately.",
-    "why_label": "WHY NEURAL PARTNER",
-    "why_title": "Why clients choose Neural Partner",
+    "why_label": "WHY NEUROSYNCH",
+    "why_title": "Why clients choose Neurosynch",
     "strength1_title": "Prototype the next day",
     "strength1_desc": "We present a working prototype on the same day as your consultation.",
     "strength2_title": "We stay until the end",
@@ -75,7 +75,7 @@
     "strength5_title": "Progress always visible",
     "strength5_desc": "Track build progress in real time via a dedicated web page.",
     "strength6_title": "Subsidy application support",
-    "strength6_desc": "Neural Partner handles the IT subsidy application paperwork on your behalf.",
+    "strength6_desc": "Neurosynch handles the IT subsidy application paperwork on your behalf.",
     "process_label": "PROCESS",
     "process_title": "How it works",
     "process_sub": "Full deployment in as little as 26 days",
@@ -100,7 +100,7 @@
   "company": {
     "label": "COMPANY",
     "title": "Company",
-    "lead": "Neural Partner Co., Ltd. is a tech company based in Nagoya, providing AI agent deployment support.",
+    "lead": "Neurosynch Co., Ltd. is a tech company based in Nagoya, providing AI agent deployment support.",
     "mission_label": "MISSION & VISION",
     "message_label": "MESSAGE",
     "message_title": "Message from the CEO",
@@ -110,7 +110,7 @@
     "info_label": "COMPANY INFO",
     "info_title": "Company Information",
     "info_name_label": "Company Name",
-    "info_name_value": "Neural Partner Co., Ltd.",
+    "info_name_value": "Neurosynch Co., Ltd.",
     "info_established_label": "Founded",
     "info_established_value": "June 2026",
     "info_ceo_label": "CEO",
@@ -118,23 +118,23 @@
     "info_capital_label": "Capital",
     "info_capital_value": "¥1,000,000",
     "info_address_label": "Address",
-    "info_address_value": "2-13 Higashi Matabee-cho, Minami-ku, Nagoya, Aichi 457-0852",
+    "info_address_value": "2-13 Higashi Matabee-cho, Minami-ku, Nagoya, Aichi 457-0833",
     "info_business_label": "Business",
     "info_business_value": "AI agent deployment support / Web application development & maintenance",
     "info_url_label": "URL",
-    "info_url_value": "neuralpartner.co.jp"
+    "info_url_value": "neurosynch.co.jp"
   },
   "nagoya": {
     "label": "NAGOYA",
     "slogan": "Strengthening Japan's economy from Nagoya.",
-    "body": "The Chubu region is one of Japan's largest economic zones, with a GDP of approximately ¥90 trillion. Built on a foundation of manufacturing led by Toyota, the region encompasses diverse industries including aerospace, logistics, and food production. Yet the small and medium-sized enterprises at the heart of this economy face three persistent challenges: chronic labour shortages, operational inefficiency, and slow digital adoption.\n\nNagoya sits at the geographic centre of the Japanese archipelago, placing Tokyo, Osaka, Kyoto, Hiroshima, and Fukuoka all within a few hours by Shinkansen. This strategic location makes it an ideal base for supporting SMEs across the entire country.\n\nNeural Partner aims to deliver AI to SMEs across the Chubu region — and beyond — strengthening Japan's economy from the ground up."
+    "body": "The Chubu region is one of Japan's largest economic zones, with a GDP of approximately ¥90 trillion. Built on a foundation of manufacturing led by Toyota, the region encompasses diverse industries including aerospace, logistics, and food production. Yet the small and medium-sized enterprises at the heart of this economy face three persistent challenges: chronic labour shortages, operational inefficiency, and slow digital adoption.\n\nNagoya sits at the geographic centre of the Japanese archipelago, placing Tokyo, Osaka, Kyoto, Hiroshima, and Fukuoka all within a few hours by Shinkansen. This strategic location makes it an ideal base for supporting SMEs across the entire country.\n\nNeurosynch aims to deliver AI to SMEs across the Chubu region — and beyond — strengthening Japan's economy from the ground up."
   },
   "careers": {
     "label": "CAREERS",
     "title": "Careers",
-    "lead": "Neural Partner is looking for engineers who are serious about transforming SME operations through AI and craftsmanship in development.",
+    "lead": "Neurosynch is looking for engineers who are serious about transforming SME operations through AI and craftsmanship in development.",
     "no_hiring_title": "We are not currently hiring",
-    "no_hiring_desc": "We plan to begin hiring in 2028. That said, we warmly welcome pre-registrations from anyone who resonates with Neural Partner's vision. We will contact pre-registrants first when hiring opens.",
+    "no_hiring_desc": "We plan to begin hiring in 2028. That said, we warmly welcome pre-registrations from anyone who resonates with Neurosynch's vision. We will contact pre-registrants first when hiring opens.",
     "no_hiring_badge": "Hiring opens: 2028",
     "philosophy_label": "OUR PHILOSOPHY",
     "job_label": "JOB POSTING",
@@ -142,10 +142,10 @@
     "position_title": "Senior AI Agent & Web Application Engineer",
     "position_sub": "Nagoya, Aichi　|　Full-time　|　Hiring in 2028 (pre-registration open)",
     "salary_label": "Annual Salary",
-    "salary_value": "¥6M – ¥7M",
+    "salary_value": "¥5M – ¥7M",
     "salary_note": "Age and academic background have no bearing on salary. Compensation is determined solely by the scope of work we can entrust to you.",
     "salary_badge": "Merit-based",
-    "about_label": "ABOUT NEURAL PARTNER",
+    "about_label": "ABOUT NEUROSYNCH",
     "features_label": "What makes this role different",
     "feature1": "We go into the field. Everyone involved in implementation attends the initial consultation and hears directly from the people who will use what we build.",
     "feature2": "No outsourcing. Everything is built in-house. We value a sense of ownership on every project.",
@@ -184,7 +184,7 @@
     "prereg_step2": "CEO Yoshiki Kuno will reply within one week",
     "prereg_step3": "You will be contacted first when hiring opens in 2028",
     "prereg_contact_label": "CONTACT",
-    "prereg_email": "yoshiki.k@neuralpartner.co.jp"
+    "prereg_email": "yoshiki.k@neurosynch.co.jp"
   },
   "contact": {
     "label": "CONTACT",
@@ -216,7 +216,7 @@
     "label": "PRIVACY POLICY",
     "title": "Privacy Policy",
     "updated": "Last updated: 1 June 2026",
-    "intro": "Neural Partner Co., Ltd. (\"we\" or \"the Company\") considers the protection of personal information an important responsibility and sets out this Privacy Policy accordingly.",
+    "intro": "Neurosynch Co., Ltd. (\"we\" or \"the Company\") considers the protection of personal information an important responsibility and sets out this Privacy Policy accordingly.",
     "s1_title": "1. Information we collect",
     "s1_body": "We may collect the following information:\n· Name, company name, email address, and enquiry content submitted via our contact form\n· Access logs and cookie data generated through use of our services",
     "s2_title": "2. Purpose of use",
@@ -228,6 +228,6 @@
     "s5_title": "5. Use of cookies",
     "s5_body": "Our website may use cookies to improve our services. You may disable cookies in your browser settings, though some features may become unavailable as a result.",
     "s6_title": "6. Contact",
-    "s6_body": "For enquiries regarding our handling of personal information, please contact us at:\nNeural Partner Co., Ltd.\n2-13 Higashi Matabee-cho, Minami-ku, Nagoya, Aichi 457-0852\ninfo@neuralpartner.co.jp"
+    "s6_body": "For enquiries regarding our handling of personal information, please contact us at:\nNeurosynch Co., Ltd.\n2-13 Higashi Matabee-cho, Minami-ku, Nagoya, Aichi 457-0833\ninfo@neurosynch.co.jp"
   }
 }

@@ -28,18 +28,18 @@ export async function generateMetadata({
     const { locale } = await params
 
     return {
-        metadataBase: new URL('https://neuralpartner.co.jp'),
+        metadataBase: new URL('https://neurosynch.co.jp'),
         title: {
             default: locale === 'ja'
-                ? 'Neural Partner | AIエージェント導入支援'
-                : 'Neural Partner | AI Agent Deployment Support',
-            template: '%s | Neural Partner',
+                ? 'Neurosynch | AIエージェント導入支援'
+                : 'Neurosynch | AI Agent Deployment Support',
+            template: '%s | Neurosynch',
         },
         description: locale === 'ja'
             ? '名古屋を拠点に、中小企業へのAIエージェント導入を支援します。先行導入価格30万円から。IT導入補助金対応予定。'
             : 'Nagoya-based AI agent deployment support for SMEs. Early adoption from ¥300,000. IT subsidy compatible.',
         openGraph: {
-            siteName: 'Neural Partner',
+            siteName: 'Neurosynch',
             locale: locale === 'ja' ? 'ja_JP' : 'en_US',
             type: 'website',
             images: [
@@ -47,7 +47,7 @@ export async function generateMetadata({
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         },
@@ -55,10 +55,10 @@ export async function generateMetadata({
             card: 'summary_large_image',
         },
         alternates: {
-            canonical: `https://neuralpartner.co.jp/${locale}`,
+            canonical: `https://neurosynch.co.jp/${locale}`,
             languages: {
-                'ja': 'https://neuralpartner.co.jp/ja',
-                'en': 'https://neuralpartner.co.jp/en',
+                'ja': 'https://neurosynch.co.jp/ja',
+                'en': 'https://neurosynch.co.jp/en',
             }
         }
     }

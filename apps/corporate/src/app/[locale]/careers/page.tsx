@@ -127,7 +127,7 @@ export default async function CareersPage({
                             {/* カードヘッダー */}
                             <div className="px-10 pt-10 pb-0">
                                 <p className="font-outfit text-xs font-semibold tracking-[.2em] text-[#00a87a] mb-3">
-                                    Neural Partner — 採用情報
+                                    Neurosynch — 採用情報
                                 </p>
                                 <h3 className="font-outfit text-2xl font-bold text-[#0f1923] leading-snug mb-2">
                                     {t('position_title')}
@@ -305,14 +305,14 @@ export async function generateMetadata({
             ? '2028年採用予定。AIエージェント・Webアプリのエンジニアを募集。年収600〜700万円。事前登録受付中。'
             : 'Hiring in 2028. AI agent & web app engineers. ¥6M–¥7M. Pre-registration open.',
         openGraph: {
-            title: locale === 'ja' ? '採用情報 | Neural Partner' : 'Careers | Neural Partner',
-            url: `https://neuralpartner.co.jp/${locale}/careers`,
+            title: locale === 'ja' ? '採用情報 | Neurosynch' : 'Careers | Neurosynch',
+            url: `https://neurosynch.co.jp/${locale}/careers`,
             images: [
                 {
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         }

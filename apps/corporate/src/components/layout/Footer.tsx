@@ -13,7 +13,7 @@ export default function Footer() {
       bg-[#f7f8fa]
     ">
             <div className="font-outfit font-bold text-sm tracking-wide text-[#8896aa]">
-                NEURAL<span className="text-[#00a87a]">.</span>PARTNER
+                neuralsynch
             </div>
             <p className="text-xs text-[#8896aa] text-center sm:text-right">
                 {t('copyright')}　|

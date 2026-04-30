@@ -6,7 +6,7 @@
     "contact": "無料相談"
   },
   "hero": {
-    "eyebrow": "NEURAL PARTNER — AI AGENT SOLUTION",
+    "eyebrow": "NEUROSYNCH — AI AGENT SOLUTION",
     "headline1": "先端テクノロジーを、",
     "headline2": "中小企業へ。",
     "cta_primary": "無料ヒアリングを申し込む",
@@ -18,7 +18,7 @@
     "stat2_num": "200万円〜",
     "stat2_label": "一般的なシステム開発会社へ\n依頼した場合の最低費用",
     "stat3_num": "30万円",
-    "stat3_label": "Neural Partnerの\nAIエージェント導入 先行価格"
+    "stat3_label": "ニューロシンクの\nAIエージェント導入 先行価格"
   },
   "problem": {
     "label": "THE PROBLEM",
@@ -48,12 +48,12 @@
   },
   "footer": {
     "privacy": "プライバシーポリシー",
-    "copyright": "© 2026 株式会社Neural Partner"
+    "copyright": "© 2026 株式会社ニューロシンク"
   },
   "services": {
     "label": "SERVICES",
     "title": "AIで、業務を変える。\n中小企業のための導入支援。",
-    "lead": "高額なシステム開発は必要ありません。Neural Partnerは、AIエージェントの導入から運用定着まで、責任を持って伴走します。",
+    "lead": "高額なシステム開発は必要ありません。ニューロシンクは、AIエージェントの導入から運用定着まで、責任を持って伴走します。",
     "main_label": "MAIN SERVICE",
     "price_badge": "先行導入・特別価格",
     "price_from": "50万円",
@@ -62,8 +62,8 @@
     "maintenance_label": "年間保守契約（任意）",
     "maintenance_price": "3万円／年",
     "maintenance_desc": "メールサポート・バグ対応・セキュリティアップデートを含みます。機能の追加・変更は別途お見積もりです。",
-    "why_label": "WHY NEURAL PARTNER",
-    "why_title": "Neural Partner が選ばれる理由",
+    "why_label": "WHY NEUROSYNCH",
+    "why_title": "ニューロシンクが選ばれる理由",
     "strength1_title": "翌日プロトタイプ提示",
     "strength1_desc": "ヒアリング当日にその場でプロトタイプをご確認いただけます。",
     "strength2_title": "最後まで責任を持って併走",
@@ -75,7 +75,7 @@
     "strength5_title": "進捗を常時公開",
     "strength5_desc": "構築中の進捗はWebページでリアルタイムに確認できます。",
     "strength6_title": "補助金申請もサポート",
-    "strength6_desc": "IT導入補助金の申請手続きはNeural Partnerが対応します。",
+    "strength6_desc": "IT導入補助金の申請手続きはニューロシンクが対応します。",
     "process_label": "PROCESS",
     "process_title": "制作の流れ",
     "process_sub": "最短26日で導入完了",
@@ -100,7 +100,7 @@
   "company": {
     "label": "COMPANY",
     "title": "会社概要",
-    "lead": "株式会社Neural Partnerは、名古屋を拠点にAIエージェントの導入支援を行うテックカンパニーです。",
+    "lead": "株式会社ニューロシンクは、名古屋を拠点にAIエージェントの導入支援を行うテックカンパニーです。",
     "mission_label": "MISSION & VISION",
     "message_label": "MESSAGE",
     "message_title": "代表者メッセージ",
@@ -110,7 +110,7 @@
     "info_label": "COMPANY INFO",
     "info_title": "会社情報",
     "info_name_label": "会社名",
-    "info_name_value": "株式会社Neural Partner",
+    "info_name_value": "株式会社ニューロシンク",
     "info_established_label": "設立",
     "info_established_value": "2026年6月",
     "info_ceo_label": "代表取締役",
@@ -118,23 +118,23 @@
     "info_capital_label": "資本金",
     "info_capital_value": "100万円",
     "info_address_label": "所在地",
-    "info_address_value": "〒457-0852　愛知県名古屋市南区東又兵ヱ町2-13",
+    "info_address_value": "〒457-0833　愛知県名古屋市南区東又兵ヱ町2-13",
     "info_business_label": "事業内容",
     "info_business_value": "AIエージェントの構築・導入支援 / Webアプリケーションの受託開発・保守",
     "info_url_label": "URL",
-    "info_url_value": "neuralpartner.co.jp"
+    "info_url_value": "neurosynch.co.jp"
   },
   "nagoya": {
     "label": "NAGOYA",
     "slogan": "名古屋から日本の経済を強くする。",
-    "body": "中部地方はGDP約90兆円を誇る日本最大級の経済圏の一つです。トヨタをはじめとする製造業を中心に、航空宇宙・物流・食品など多様な産業が集積しています。しかしその中心を支える中小企業の多くは、慢性的な人手不足・業務の非効率・デジタル化の遅れという三つの課題を抱えています。\n\n名古屋は日本列島のほぼ中央に位置し、東京・大阪・京都・広島・福岡のいずれへも新幹線で数時間以内でアクセスできます。この地理的優位性は、全国の中小企業を支援するための拠点として最適です。\n\nNeural Partnerは名古屋を起点に、中部圏の中小企業へAIを届け、日本の経済を足元から強くすることを目指しています。"
+    "body": "中部地方はGDP約90兆円を誇る日本最大級の経済圏の一つです。トヨタをはじめとする製造業を中心に、航空宇宙・物流・食品など多様な産業が集積しています。しかしその中心を支える中小企業の多くは、慢性的な人手不足・業務の非効率・デジタル化の遅れという三つの課題を抱えています。\n\n名古屋は日本列島のほぼ中央に位置し、東京・大阪・京都・広島・福岡のいずれへも新幹線で数時間以内でアクセスできます。この地理的優位性は、全国の中小企業を支援するための拠点として最適です。\n\nニューロシンクは名古屋を起点に、中部圏の中小企業へAIを届け、日本の経済を足元から強くすることを目指しています。"
   },
   "careers": {
     "label": "CAREERS",
     "title": "採用情報",
-    "lead": "Neural Partnerは、AIと職人的な開発で中小企業の現場を変えることを本気で目指すエンジニアを探しています。",
+    "lead": "ニューロシンクは、AIと職人的な開発で中小企業の現場を変えることを本気で目指すエンジニアを探しています。",
     "no_hiring_title": "現在、スタッフの募集は行っていません",
-    "no_hiring_desc": "採用開始は2028年を予定しています。ただし、Neural Partnerのビジョンに共感いただける方からの事前登録はいつでも歓迎します。正式な募集開始時に優先的にご連絡します。",
+    "no_hiring_desc": "採用開始は2028年を予定しています。ただし、ニューロシンクのビジョンに共感いただける方からの事前登録はいつでも歓迎します。正式な募集開始時に優先的にご連絡します。",
     "no_hiring_badge": "採用開始：2028年予定",
     "philosophy_label": "OUR PHILOSOPHY",
     "job_label": "JOB POSTING",
@@ -142,10 +142,10 @@
     "position_title": "シニア AIエージェント・Webアプリ エンジニア",
     "position_sub": "愛知県名古屋市　|　正社員　|　2028年採用予定（事前登録受付中）",
     "salary_label": "年収",
-    "salary_value": "600万円 〜 700万円",
+    "salary_value": "500万円 〜 700万円",
     "salary_note": "年齢・学歴は一切考慮しません。任せられる仕事の範囲で決定します。",
     "salary_badge": "実力主義",
-    "about_label": "NEURAL PARTNER について",
+    "about_label": "NEUROSYNCH について",
     "features_label": "この仕事の特徴",
     "feature1": "現場に入ります。実装に携わる人間は必ずヒアリングに同行し、そこで働く人の声を直接聞きます。",
     "feature2": "外注しません。すべて社内で作りきります。当事者意識を持ってプロジェクトに関わることを大切にしています。",
@@ -184,7 +184,7 @@
     "prereg_step2": "代表・久野より1週間以内に返信します",
     "prereg_step3": "採用開始（2028年予定）の際に優先してご連絡します",
     "prereg_contact_label": "CONTACT",
-    "prereg_email": "yoshiki.k@neuralpartner.co.jp"
+    "prereg_email": "yoshiki.k@neurosynch.co.jp"
   },
   "contact": {
     "label": "CONTACT",
@@ -216,7 +216,7 @@
     "label": "PRIVACY POLICY",
     "title": "プライバシーポリシー",
     "updated": "最終更新日：2026年6月1日",
-    "intro": "株式会社Neural Partner（以下「当社」）は、お客様の個人情報の保護を重要な責務と考え、以下のとおりプライバシーポリシーを定めます。",
+    "intro": "株式会社ニューロシンク（以下「当社」）は、お客様の個人情報の保護を重要な責務と考え、以下のとおりプライバシーポリシーを定めます。",
     "s1_title": "1. 取得する情報",
     "s1_body": "当社は、以下の情報を取得することがあります。\n・お問い合わせフォームにご入力いただいた氏名・会社名・メールアドレス・お問い合わせ内容\n・当社サービスのご利用に際して生じるアクセスログ・Cookie情報",
     "s2_title": "2. 利用目的",
@@ -228,6 +228,6 @@
     "s5_title": "5. Cookieの使用",
     "s5_body": "当社ウェブサイトでは、サービス向上のためCookieを使用することがあります。ブラウザの設定によりCookieを無効にすることができますが、一部機能が利用できなくなる場合があります。",
     "s6_title": "6. お問い合わせ",
-    "s6_body": "個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。\n株式会社Neural Partner\n〒457-0852 愛知県名古屋市南区東又兵ヱ町2-13\ninfo@neuralpartner.co.jp"
+    "s6_body": "個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。\n株式会社ニューロシンク\n〒457-0833 愛知県名古屋市南区東又兵ヱ町2-13\ninfo@neurosynch.co.jp"
   }
 }
