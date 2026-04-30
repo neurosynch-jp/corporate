@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server'
-import { getStory } from '@/lib/getStory'
+import {getTranslations} from 'next-intl/server'
+import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
 
 type CareersContent = {
@@ -13,7 +13,7 @@ export default async function CareersPage({
                                           }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
     const story = await getStory('careers', locale)
     const content = story?.content as CareersContent | null
     const t = await getTranslations('careers')
@@ -32,14 +32,14 @@ export default async function CareersPage({
     ]
 
     const conditions = [
-        { label: t('cond1_label'), value: t('cond1_value') },
-        { label: t('cond2_label'), value: t('cond2_value') },
-        { label: t('cond3_label'), value: t('cond3_value') },
-        { label: t('cond4_label'), value: t('cond4_value') },
-        { label: t('cond5_label'), value: t('cond5_value') },
-        { label: t('cond6_label'), value: t('cond6_value') },
-        { label: t('cond7_label'), value: t('cond7_value') },
-        { label: t('cond8_label'), value: t('cond8_value') },
+        {label: t('cond1_label'), value: t('cond1_value')},
+        {label: t('cond2_label'), value: t('cond2_value')},
+        {label: t('cond3_label'), value: t('cond3_value')},
+        {label: t('cond4_label'), value: t('cond4_value')},
+        {label: t('cond5_label'), value: t('cond5_value')},
+        {label: t('cond6_label'), value: t('cond6_value')},
+        {label: t('cond7_label'), value: t('cond7_value')},
+        {label: t('cond8_label'), value: t('cond8_value')},
     ]
 
     return (
@@ -145,7 +145,8 @@ export default async function CareersPage({
                             </div>
 
                             {/* 給与バー */}
-                            <div className="bg-[#1e3a5f] px-10 py-5 flex items-center justify-between flex-wrap gap-4 mt-6">
+                            <div
+                                className="bg-[#1e3a5f] px-10 py-5 flex items-center justify-between flex-wrap gap-4 mt-6">
                                 <div>
                                     <p className="font-outfit text-xs text-white/45 tracking-wide mb-1">
                                         {t('salary_label')}
@@ -176,8 +177,9 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {features.map((f, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
-                                                <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2" />
+                                            <li key={i}
+                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                                <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2"/>
                                                 {f}
                                             </li>
                                         ))}
@@ -191,8 +193,9 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {required.map((r, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
-                                                <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2" />
+                                            <li key={i}
+                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                                <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2"/>
                                                 {r}
                                             </li>
                                         ))}
@@ -206,8 +209,9 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {preferred.map((p, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
-                                                <span className="w-2 h-2 rounded-full bg-[#dde2ea] flex-shrink-0 mt-2" />
+                                            <li key={i}
+                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                                <span className="w-2 h-2 rounded-full bg-[#dde2ea] flex-shrink-0 mt-2"/>
                                                 {p}
                                             </li>
                                         ))}
@@ -221,7 +225,8 @@ export default async function CareersPage({
                                     </p>
                                     <div className="grid grid-cols-2 gap-3">
                                         {conditions.map((c, i) => (
-                                            <div key={i} className="bg-[#f7f8fa] rounded-lg px-4 py-3 border border-[#dde2ea]">
+                                            <div key={i}
+                                                 className="bg-[#f7f8fa] rounded-lg px-4 py-3 border border-[#dde2ea]">
                                                 <p className="font-outfit text-[10px] font-semibold tracking-wide text-[#8896aa] mb-1">
                                                     {c.label}
                                                 </p>
@@ -297,7 +302,7 @@ export async function generateMetadata({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
 
     return {
         title: locale === 'ja' ? '採用情報' : 'Careers',

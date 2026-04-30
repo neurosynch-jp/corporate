@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server'
-import { getStory } from '@/lib/getStory'
+import {getTranslations} from 'next-intl/server'
+import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
 import {renderRichText} from "@storyblok/react"
 import NagoyaSection from '@/components/sections/NagoyaSection'
@@ -18,19 +18,19 @@ export default async function CompanyPage({
                                           }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
     const story = await getStory('company', locale)
     const content = story?.content as CompanyContent | null
     const t = await getTranslations('company')
 
     const infoRows = [
-        { label: t('info_name_label'),        value: t('info_name_value') },
-        { label: t('info_established_label'), value: t('info_established_value') },
-        { label: t('info_ceo_label'),         value: t('info_ceo_value') },
-        { label: t('info_capital_label'),     value: t('info_capital_value') },
-        { label: t('info_address_label'),     value: t('info_address_value') },
-        { label: t('info_business_label'),    value: t('info_business_value') },
-        { label: t('info_url_label'),         value: t('info_url_value') },
+        {label: t('info_name_label'), value: t('info_name_value')},
+        {label: t('info_established_label'), value: t('info_established_value')},
+        {label: t('info_ceo_label'), value: t('info_ceo_value')},
+        {label: t('info_capital_label'), value: t('info_capital_value')},
+        {label: t('info_address_label'), value: t('info_address_value')},
+        {label: t('info_business_label'), value: t('info_business_value')},
+        {label: t('info_url_label'), value: t('info_url_value')},
     ]
 
     return (
@@ -77,7 +77,7 @@ export default async function CompanyPage({
                         {/* ビジョン */}
                         <Reveal delay={120}>
                             <div className="bg-white/4 border border-white/10 rounded-xl p-10"
-                                 style={{ background: 'rgba(36,63,106,0.6)' }}>
+                                 style={{background: 'rgba(36,63,106,0.6)'}}>
                                 <p className="font-outfit text-xs font-semibold tracking-[.2em] text-[#4dd4aa] mb-4">
                                     VISION
                                 </p>
@@ -116,8 +116,8 @@ export default async function CompanyPage({
                   flex items-center justify-center
                 ">
                                     <div className="text-center">
-                                        <div className="w-16 h-16 rounded-full bg-[#dde2ea] mx-auto mb-2" />
-                                        <div className="w-20 h-2 bg-[#dde2ea] rounded mx-auto" />
+                                        <div className="w-16 h-16 rounded-full bg-[#dde2ea] mx-auto mb-2"/>
+                                        <div className="w-20 h-2 bg-[#dde2ea] rounded mx-auto"/>
                                     </div>
                                 </div>
                                 <p className="font-bold text-lg text-[#0f1923] mb-1">
@@ -148,24 +148,25 @@ export default async function CompanyPage({
                                     <p className="font-outfit text-xl font-bold text-[#0f1923] leading-snug">
                                         {content?.representative_quote}
                                     </p>
-                                    <span className="text-[#00a87a] font-outfit text-4xl leading-none self-end flex-shrink-0">
+                                    <span
+                                        className="text-[#00a87a] font-outfit text-4xl leading-none self-end flex-shrink-0">
     &rdquo;
   </span>
                                 </div>
 
                                 {/* 本文 */}
-yy                                <div
-                                    className="richtext text-sm text-[#4a5568] font-light leading-loose"
-                                    dangerouslySetInnerHTML={{
-                                        __html: content?.representative_message
-                                            ? String(renderRichText(content.representative_message))
-                                            : ''
-                                    }}
-                                />
+                                yy <div
+                                className="richtext text-sm text-[#4a5568] font-light leading-loose"
+                                dangerouslySetInnerHTML={{
+                                    __html: content?.representative_message
+                                        ? String(renderRichText(content.representative_message))
+                                        : ''
+                                }}
+                            />
 
                                 {/* 署名 */}
                                 <div className="mt-8 pt-6 border-t border-[#dde2ea] text-sm text-[#8896aa] font-light">
-                                    株式会社Neural Partner　代表取締役<br />
+                                    株式会社Neural Partner 代表取締役<br/>
                                     <span className="font-medium text-[#4a5568]">
                     {t('representative_name')}
                   </span>
@@ -177,7 +178,7 @@ yy                                <div
             </section>
 
             {/* 名古屋セクション */}
-            <NagoyaSection />
+            <NagoyaSection/>
 
             {/* 会社情報テーブル */}
             <section className="py-24 px-16 bg-[#f7f8fa] border-t border-[#dde2ea]">
@@ -226,7 +227,7 @@ export async function generateMetadata({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
 
     return {
         title: locale === 'ja' ? '会社概要' : 'Company',

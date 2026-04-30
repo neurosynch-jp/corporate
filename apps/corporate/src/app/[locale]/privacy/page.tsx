@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import {getTranslations} from 'next-intl/server'
 import Reveal from '@/components/ui/Reveal'
 
 export default async function PrivacyPage({
@@ -6,16 +6,16 @@ export default async function PrivacyPage({
                                           }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
     const t = await getTranslations('privacy')
 
     const sections = [
-        { title: t('s1_title'), body: t('s1_body') },
-        { title: t('s2_title'), body: t('s2_body') },
-        { title: t('s3_title'), body: t('s3_body') },
-        { title: t('s4_title'), body: t('s4_body') },
-        { title: t('s5_title'), body: t('s5_body') },
-        { title: t('s6_title'), body: t('s6_body') },
+        {title: t('s1_title'), body: t('s1_body')},
+        {title: t('s2_title'), body: t('s2_body')},
+        {title: t('s3_title'), body: t('s3_body')},
+        {title: t('s4_title'), body: t('s4_body')},
+        {title: t('s5_title'), body: t('s5_body')},
+        {title: t('s6_title'), body: t('s6_body')},
     ]
 
     return (
@@ -56,7 +56,8 @@ export default async function PrivacyPage({
                                     </h2>
                                     <div className="text-sm text-[#4a5568] font-light leading-loose">
                                         {section.body.split('\n').map((line, j) => (
-                                            <p key={j} className={line.startsWith('·') || line.startsWith('・') ? 'pl-3' : ''}>
+                                            <p key={j}
+                                               className={line.startsWith('·') || line.startsWith('・') ? 'pl-3' : ''}>
                                                 {line}
                                             </p>
                                         ))}

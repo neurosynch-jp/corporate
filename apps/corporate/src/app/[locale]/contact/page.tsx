@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server'
-import { Link } from '@/i18n/routing'
+import {getTranslations} from 'next-intl/server'
+import {Link} from '@/i18n/routing'
 import Reveal from '@/components/ui/Reveal'
 import ContactForm from '@/components/sections/ContactForm'
 
@@ -8,7 +8,7 @@ export default async function ContactPage({
                                           }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
     const t = await getTranslations('contact')
 
     return (
@@ -76,7 +76,7 @@ export default async function ContactPage({
                     {/* 右：フォーム */}
                     <Reveal delay={120}>
                         <div className="bg-white border border-[#dde2ea] rounded-xl p-10">
-                            <ContactForm />
+                            <ContactForm/>
                         </div>
                     </Reveal>
 
@@ -91,7 +91,7 @@ export async function generateMetadata({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
 
     return {
         title: locale === 'ja' ? 'お問い合わせ' : 'Contact',

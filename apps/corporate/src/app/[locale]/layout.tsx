@@ -25,7 +25,7 @@ export async function generateMetadata({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
 
     return {
         metadataBase: new URL('https://neurosynch.co.jp'),
@@ -84,7 +84,7 @@ export default async function LocaleLayout({
         <body className={`${notoSansJP.variable} ${outfit.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
             <Header/>
-            <main>{children}<N8nChat /></main>
+            <main>{children}<N8nChat/></main>
             <Footer/>
         </NextIntlClientProvider>
         </body>

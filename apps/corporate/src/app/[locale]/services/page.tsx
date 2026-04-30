@@ -1,7 +1,7 @@
-import { getTranslations } from 'next-intl/server'
-import { getStory } from '@/lib/getStory'
+import {getTranslations} from 'next-intl/server'
+import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
-import { Link } from '@/i18n/routing'
+import {Link} from '@/i18n/routing'
 
 type ServicesContent = {
     service_headline: string
@@ -14,26 +14,26 @@ export default async function ServicesPage({
                                            }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
     const story = await getStory('services', locale)
     const content = story?.content as ServicesContent | null
     const t = await getTranslations('services')
 
     const strengths = [
-        { title: t('strength1_title'), desc: t('strength1_desc') },
-        { title: t('strength2_title'), desc: t('strength2_desc') },
-        { title: t('strength3_title'), desc: t('strength3_desc') },
-        { title: t('strength4_title'), desc: t('strength4_desc') },
-        { title: t('strength5_title'), desc: t('strength5_desc') },
-        { title: t('strength6_title'), desc: t('strength6_desc') },
+        {title: t('strength1_title'), desc: t('strength1_desc')},
+        {title: t('strength2_title'), desc: t('strength2_desc')},
+        {title: t('strength3_title'), desc: t('strength3_desc')},
+        {title: t('strength4_title'), desc: t('strength4_desc')},
+        {title: t('strength5_title'), desc: t('strength5_desc')},
+        {title: t('strength6_title'), desc: t('strength6_desc')},
     ]
 
     const steps = [
-        { name: t('step1_name'), duration: t('step1_duration'), desc: t('step1_desc') },
-        { name: t('step2_name'), duration: t('step2_duration'), desc: t('step2_desc') },
-        { name: t('step3_name'), duration: t('step3_duration'), desc: t('step3_desc') },
-        { name: t('step4_name'), duration: t('step4_duration'), desc: t('step4_desc') },
-        { name: t('step5_name'), duration: t('step5_duration'), desc: t('step5_desc') },
+        {name: t('step1_name'), duration: t('step1_duration'), desc: t('step1_desc')},
+        {name: t('step2_name'), duration: t('step2_duration'), desc: t('step2_desc')},
+        {name: t('step3_name'), duration: t('step3_duration'), desc: t('step3_desc')},
+        {name: t('step4_name'), duration: t('step4_duration'), desc: t('step4_desc')},
+        {name: t('step5_name'), duration: t('step5_duration'), desc: t('step5_desc')},
     ]
 
     return (
@@ -73,7 +73,8 @@ export default async function ServicesPage({
                     {/* 価格カード */}
                     <Reveal delay={150}>
                         <div className="bg-[#f7f8fa] border border-[#dde2ea] rounded-xl p-8">
-                            <div className="inline-block bg-[#00a87a] text-white font-outfit text-xs font-semibold tracking-wide px-3 py-1 rounded mb-4">
+                            <div
+                                className="inline-block bg-[#00a87a] text-white font-outfit text-xs font-semibold tracking-wide px-3 py-1 rounded mb-4">
                                 {t('price_badge')}
                             </div>
                             <div className="flex items-baseline gap-3 mb-2">
@@ -137,7 +138,7 @@ export default async function ServicesPage({
                                     <div className="
                     absolute top-0 left-0 right-0 h-[3px] bg-[#00a87a]
                     opacity-0 group-hover:opacity-100 transition-opacity
-                  " />
+                  "/>
                                     <div className="
                     w-8 h-8 rounded-lg bg-[#e6f7f2] mb-4
                     flex items-center justify-center
@@ -191,7 +192,7 @@ export default async function ServicesPage({
                                         <div className="
                       absolute top-5 left-[calc(50%+24px)] right-[-calc(50%-24px)]
                       h-px bg-[#00a87a] w-full
-                    " />
+                    "/>
                                     )}
 
                                     {/* 期間バッジ */}
@@ -267,7 +268,7 @@ export async function generateMetadata({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
-    const { locale } = await params
+    const {locale} = await params
 
     return {
         title: locale === 'ja'
