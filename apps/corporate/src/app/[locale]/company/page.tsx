@@ -193,6 +193,7 @@ yy                                <div
 
                     <Reveal delay={100}>
                         <table className="w-full border-collapse">
+                            <tbody>
                             {infoRows.map((row, i) => (
                                 <tr
                                     key={i}
@@ -211,6 +212,7 @@ yy                                <div
                                     </td>
                                 </tr>
                             ))}
+                            </tbody>
                         </table>
                     </Reveal>
                 </div>

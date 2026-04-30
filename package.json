@@ -22,6 +22,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@n8n/chat": "^1.18.3",
     "@storyblok/richtext": "^4.2.0"
   }
 }
