@@ -279,13 +279,13 @@ export async function generateMetadata({
             : 'End-to-end AI agent deployment support. Early adoption at ¥300,000. Prototype presented same day.',
         openGraph: {
             title: locale === 'ja' ? 'AIエージェント導入パッケージ' : 'AI Agent Onboarding Package',
-            url: `https://neuralpartner.co.jp/${locale}/services`,
+            url: `https://neurosynch.co.jp/${locale}/services`,
             images: [
                 {
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         }

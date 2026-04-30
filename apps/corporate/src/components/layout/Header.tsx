@@ -40,12 +40,28 @@ export default function Header() {
         ${scrolled ? 'shadow-sm' : ''}
       `}>
                 {/* ロゴ */}
-                <Link
-                    href="/"
-                    onClick={() => setMenuOpen(false)}
-                    className="font-outfit font-bold text-lg tracking-wide text-[#0f1923] no-underline"
-                >
-                    neurosynch
+                <Link href="/" className="no-underline flex items-center">
+                    <svg width="200" height="33" viewBox="0 0 560 56">
+                        <defs>
+                            <mask id="logo-mask">
+                                <rect width="560" height="56" fill="white"/>
+                                <line x1="166" y1="-5" x2="140" y2="61" stroke="black" strokeWidth="7"/>
+                                <line x1="310" y1="-5" x2="284" y2="61" stroke="black" strokeWidth="7"/>
+                                <line x1="454" y1="-5" x2="428" y2="61" stroke="black" strokeWidth="7"/>
+                            </mask>
+                        </defs>
+                        <text
+                            fontFamily="'Outfit', sans-serif"
+                            fontWeight="700"
+                            fontSize="85"
+                            fill="#0f1923"
+                            y="40"
+                            letterSpacing="12"
+                            mask="url(#logo-mask)"
+                        >
+                            neurosynch
+                        </text>
+                    </svg>
                 </Link>
 
                 {/* PC：ナビリンク */}

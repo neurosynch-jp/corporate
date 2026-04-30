@@ -63,11 +63,11 @@ export default async function ContactPage({
                                 <p className="font-outfit font-semibold text-xs tracking-wide text-[#8896aa] mb-3">
                                     DIRECT CONTACT
                                 </p>
-                                <p>株式会社Neural Partner</p>
-                                <p>〒457-0852</p>
+                                <p>株式会社Neurosynch</p>
+                                <p>〒457-0833</p>
                                 <p>愛知県名古屋市南区東又兵ヱ町2-13</p>
                                 <p className="text-[#00a87a] mt-3">
-                                    info@neuralpartner.co.jp
+                                    info@neurosynch.co.jp
                                 </p>
                             </div>
                         </div>
@@ -99,14 +99,14 @@ export async function generateMetadata({
             ? '採用・取材・提携など、お気軽にお問い合わせください。'
             : 'Get in touch for careers, press, partnerships, and other enquiries.',
         openGraph: {
-            title: locale === 'ja' ? 'お問い合わせ | Neural Partner' : 'Contact | Neural Partner',
-            url: `https://neuralpartner.co.jp/${locale}/contact`,
+            title: locale === 'ja' ? 'お問い合わせ | Neurosynch' : 'Contact | Neurosynch',
+            url: `https://neurosynch.co.jp/${locale}/contact`,
             images: [
                 {
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         }

@@ -55,23 +55,23 @@ export async function generateMetadata({
 
     return {
         title: locale === 'ja'
-            ? 'Neural Partner | AIエージェント導入支援'
-            : 'Neural Partner | AI Agent Deployment Support',
+            ? 'Neurosynch | AIエージェント導入支援'
+            : 'Neurosynch | AI Agent Deployment Support',
         description: locale === 'ja'
             ? '名古屋を拠点に、中小企業へのAIエージェント導入を支援します。先行導入価格30万円から。'
             : 'Nagoya-based AI agent deployment support for SMEs. Early adoption from ¥300,000.',
         openGraph: {
             title: locale === 'ja' ? '先端テクノロジーを、中小企業へ。' : 'Bringing Advanced Technology to SMEs.',
             description: locale === 'ja'
-                ? 'Neural Partnerは、AIエージェントの導入から運用定着まで責任を持って伴走します。'
-                : 'Neural Partner accompanies you from AI agent deployment through to full operational adoption.',
-            url: `https://neuralpartner.co.jp/${locale}`,
+                ? 'Neurosynchは、AIエージェントの導入から運用定着まで責任を持って伴走します。'
+                : 'Neurosynch accompanies you from AI agent deployment through to full operational adoption.',
+            url: `https://neurosynch.co.jp/${locale}`,
             images: [
                 {
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         }

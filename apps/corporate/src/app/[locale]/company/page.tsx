@@ -166,7 +166,7 @@ export default async function CompanyPage({
 
                                 {/* 署名 */}
                                 <div className="mt-8 pt-6 border-t border-[#dde2ea] text-sm text-[#8896aa] font-light">
-                                    株式会社Neural Partner 代表取締役<br/>
+                                    株式会社Neurosynch 代表取締役<br/>
                                     <span className="font-medium text-[#4a5568]">
                     {t('representative_name')}
                   </span>
@@ -232,17 +232,17 @@ export async function generateMetadata({
     return {
         title: locale === 'ja' ? '会社概要' : 'Company',
         description: locale === 'ja'
-            ? '株式会社Neural Partner。名古屋市南区。代表取締役：久野嘉樹。AIエージェント導入支援・Webアプリ開発。'
-            : 'Neural Partner Co., Ltd. Nagoya. CEO: Yoshiki Kuno. AI agent deployment & web application development.',
+            ? '株式会社Neurosynch。名古屋市南区。代表取締役：久野嘉樹。AIエージェント導入支援・Webアプリ開発。'
+            : 'Neurosynch Co., Ltd. Nagoya. CEO: Yoshiki Kuno. AI agent deployment & web application development.',
         openGraph: {
-            title: locale === 'ja' ? '会社概要 | Neural Partner' : 'Company | Neural Partner',
-            url: `https://neuralpartner.co.jp/${locale}/company`,
+            title: locale === 'ja' ? '会社概要 | Neurosynch' : 'Company | Neurosynch',
+            url: `https://neurosynch.co.jp/${locale}/company`,
             images: [
                 {
                     url: '/og-image.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'Neural Partner',
+                    alt: 'Neurosynch',
                 }
             ]
         }
