@@ -14,6 +14,8 @@ export default async function Problem() {
 
     return (
         <section className="problem" id="problem">
+            <div className="bg-text on-white top-right">REALITY</div>
+
             <div className="problem-container">
                 <Reveal>
                     <div className="section-label">{t('label1')}</div>
@@ -89,7 +91,8 @@ export default async function Problem() {
                     <div className="closing-statement">
                         <p className="closing-text">
                             {t('closingLine1')}<br/>
-                            {t('closingLine2Before')}<span className="em">{t('closingLine2Em')}</span>{t('closingLine2After')}
+                            {t('closingLine2Before')}<span
+                            className="em">{t('closingLine2Em')}</span>{t('closingLine2After')}
                         </p>
                     </div>
                 </Reveal>

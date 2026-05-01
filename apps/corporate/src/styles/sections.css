@@ -1967,3 +1967,119 @@
     }
 }
 
+.bg-text {
+  position: absolute;
+  font-family: var(--font-en);
+  font-weight: 200;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+/* ライト背景用 */
+.bg-text.light {
+  color: var(--bg);
+}
+
+/* ダーク背景用 */
+.bg-text.dark {
+  color: rgba(255, 255, 255, 0.035);
+}
+
+/* 配置位置：右上 */
+.bg-text.top-right {
+  top: 60px;
+  right: -40px;
+  font-size: clamp(120px, 18vw, 240px);
+}
+
+/* 配置位置：左上 */
+.bg-text.top-left {
+  top: 60px;
+  left: -40px;
+  font-size: clamp(120px, 18vw, 240px);
+}
+
+@media (max-width: 900px) {
+  .bg-text.top-right,
+  .bg-text.top-left {
+    font-size: 80px;
+    top: 32px;
+  }
+  .bg-text.top-right { right: -20px; }
+  .bg-text.top-left { left: -20px; }
+}
+
+/* 既存の .problem 定義に以下を追加 */
+.problem {
+  overflow: hidden;  /* 装飾文字のはみ出し対策 */
+}
+
+/* 既存の .problem-container 定義に以下を追加 */
+.problem-container {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-text {
+  position: absolute;
+  font-family: var(--font-en);
+  font-weight: 200;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+/* 白背景上 (Problem) */
+.bg-text.on-white {
+  color: #f4f5f7;
+}
+
+/* 薄グレー背景上 (Solution) - var(--bg) #f7f8fa とのコントラストで見える色 */
+.bg-text.on-gray {
+  color: #f0f2f5;
+}
+
+/* ダーク背景上 (Target) */
+.bg-text.on-dark {
+  color: rgba(255, 255, 255, 0.035);
+}
+
+/* 配置位置：右上 */
+.bg-text.top-right {
+  top: 60px;
+  right: -40px;
+  font-size: clamp(120px, 18vw, 240px);
+}
+
+/* 配置位置：左上 */
+.bg-text.top-left {
+  top: 60px;
+  left: -40px;
+  font-size: clamp(120px, 18vw, 240px);
+}
+
+@media (max-width: 900px) {
+  .bg-text.top-right,
+  .bg-text.top-left {
+    font-size: 80px;
+    top: 32px;
+  }
+  .bg-text.top-right { right: -20px; }
+  .bg-text.top-left { left: -20px; }
+}
+
+.problem {
+  overflow: hidden;
+}
+
+.problem-container {
+  position: relative;
+  z-index: 1;
+}

@@ -27,6 +27,7 @@ export default async function Target() {
     return (
         <section className="target" id="target">
             <div className="target-bg-grid"></div>
+            <div className="bg-text on-dark top-left">FIELD</div>
 
             <div className="target-container">
                 <Reveal>
@@ -56,7 +57,6 @@ export default async function Target() {
                                         sizes="(max-width: 900px) 100vw, 33vw"
                                         style={{objectFit: 'cover'}}
                                     />
-                                    <div className="target-card-industry">{c.industryEn}</div>
                                     <div className="target-card-name">{c.industryJp}</div>
                                 </div>
                                 <div className="target-card-pain">{c.pain}</div>

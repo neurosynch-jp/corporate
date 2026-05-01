@@ -42,8 +42,13 @@ export default async function Solution() {
     const flowSteps = t.raw('flowSteps') as FlowStep[]
     const includes = t.raw('pricing.includes') as string[]
 
+    console.log('solution label:', t('label'))
+    console.log('flowSteps:', flowSteps)
+
     return (
         <section className="solution" id="solution">
+            <div className="bg-text on-gray top-right">APPROACH</div>
+
             <div className="solution-container">
                 <Reveal>
                     <div className="section-label">{t('label')}</div>
