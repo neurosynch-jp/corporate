@@ -1,22 +1,12 @@
 import {getTranslations} from 'next-intl/server'
-import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
 import {Link} from '@/i18n/routing'
-
-type ServicesContent = {
-    service_headline: string
-    service_lead: string
-    appeal_text: string
-}
 
 export default async function ServicesPage({
                                                params
                                            }: {
     params: Promise<{ locale: string }>
 }) {
-    const {locale} = await params
-    const story = await getStory('services', locale)
-    const content = story?.content as ServicesContent | null
     const t = await getTranslations('services')
 
     const strengths = [
@@ -62,10 +52,10 @@ export default async function ServicesPage({
                                 {t('main_label')}
                             </p>
                             <h2 className="font-outfit text-3xl font-bold text-[#0f1923] mb-6">
-                                {content?.service_headline}
+                                {t('service_headline')}
                             </h2>
                             <p className="text-sm text-[#4a5568] leading-loose font-light mb-8">
-                                {content?.service_lead}
+                                {t('service_lead')}
                             </p>
                         </div>
                     </Reveal>
@@ -73,17 +63,16 @@ export default async function ServicesPage({
                     {/* 価格カード */}
                     <Reveal delay={150}>
                         <div className="bg-[#f7f8fa] border border-[#dde2ea] rounded-xl p-8">
-                            <div
-                                className="inline-block bg-[#00a87a] text-white font-outfit text-xs font-semibold tracking-wide px-3 py-1 rounded mb-4">
+                            <div className="inline-block bg-[#00a87a] text-white font-outfit text-xs font-semibold tracking-wide px-3 py-1 rounded mb-4">
                                 {t('price_badge')}
                             </div>
                             <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-[#8896aa] line-through text-base font-light">
-                  {t('price_from')}
-                </span>
+                                <span className="text-[#8896aa] line-through text-base font-light">
+                                    {t('price_from')}
+                                </span>
                                 <span className="font-outfit text-4xl font-bold text-[#0f1923]">
-                  {t('price_current')}
-                </span>
+                                    {t('price_current')}
+                                </span>
                             </div>
                             <p className="text-xs text-[#8896aa] font-light leading-relaxed mb-6">
                                 {t('price_note')}
@@ -101,12 +90,7 @@ export default async function ServicesPage({
                             </div>
                             <Link
                                 href="/contact"
-                                className="
-                  block text-center mt-6 py-3 rounded
-                  bg-[#00a87a] text-white
-                  font-outfit text-sm font-semibold
-                  hover:bg-[#007d5a] transition-colors
-                "
+                                className="block text-center mt-6 py-3 rounded bg-[#00a87a] text-white font-outfit text-sm font-semibold hover:bg-[#007d5a] transition-colors"
                             >
                                 無料ヒアリングを申し込む
                             </Link>
@@ -129,21 +113,9 @@ export default async function ServicesPage({
                     <div className="grid grid-cols-3 gap-5">
                         {strengths.map((s, i) => (
                             <Reveal key={i} delay={i * 80}>
-                                <div className="
-                  group p-6 bg-white rounded-lg
-                  border border-[#dde2ea]
-                  hover:border-[#00a87a] hover:shadow-md
-                  transition-all duration-200 relative overflow-hidden
-                ">
-                                    <div className="
-                    absolute top-0 left-0 right-0 h-[3px] bg-[#00a87a]
-                    opacity-0 group-hover:opacity-100 transition-opacity
-                  "/>
-                                    <div className="
-                    w-8 h-8 rounded-lg bg-[#e6f7f2] mb-4
-                    flex items-center justify-center
-                    text-[#00a87a] text-sm
-                  ">
+                                <div className="group p-6 bg-white rounded-lg border border-[#dde2ea] hover:border-[#00a87a] hover:shadow-md transition-all duration-200 relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00a87a] opacity-0 group-hover:opacity-100 transition-opacity"/>
+                                    <div className="w-8 h-8 rounded-lg bg-[#e6f7f2] mb-4 flex items-center justify-center text-[#00a87a] text-sm">
                                         ✓
                                     </div>
                                     <h3 className="text-sm font-bold text-[#0f1923] mb-2">
@@ -178,39 +150,18 @@ export default async function ServicesPage({
                         {steps.map((step, i) => (
                             <Reveal key={i} delay={i * 80}>
                                 <div className="relative flex flex-col items-center text-center">
-                                    {/* 丸番号 */}
-                                    <div className="
-                    w-12 h-12 rounded-full bg-[#1e3a5f] text-white
-                    font-outfit font-bold text-sm
-                    flex items-center justify-center mb-3 z-10
-                  ">
+                                    <div className="w-12 h-12 rounded-full bg-[#1e3a5f] text-white font-outfit font-bold text-sm flex items-center justify-center mb-3 z-10">
                                         {String(i + 1).padStart(2, '0')}
                                     </div>
-
-                                    {/* 矢印 */}
                                     {i < steps.length - 1 && (
-                                        <div className="
-                      absolute top-5 left-[calc(50%+24px)] right-[-calc(50%-24px)]
-                      h-px bg-[#00a87a] w-full
-                    "/>
+                                        <div className="absolute top-5 left-[calc(50%+24px)] right-[-calc(50%-24px)] h-px bg-[#00a87a] w-full"/>
                                     )}
-
-                                    {/* 期間バッジ */}
-                                    <div className="
-                    inline-block px-3 py-1 rounded-full mb-2
-                    bg-[#e6f7f2] text-[#00a87a]
-                    font-outfit text-xs font-semibold
-                    border border-[#00a87a]/20
-                  ">
+                                    <div className="inline-block px-3 py-1 rounded-full mb-2 bg-[#e6f7f2] text-[#00a87a] font-outfit text-xs font-semibold border border-[#00a87a]/20">
                                         {step.duration}
                                     </div>
-
-                                    {/* ステップ名 */}
                                     <p className="font-bold text-xs text-[#0f1923] mb-2 whitespace-pre-line">
                                         {step.name}
                                     </p>
-
-                                    {/* 説明 */}
                                     <p className="text-[11px] text-[#4a5568] font-light leading-relaxed">
                                         {step.desc}
                                     </p>
@@ -247,12 +198,7 @@ export default async function ServicesPage({
                         </p>
                         <Link
                             href="/contact"
-                            className="
-                inline-block font-outfit text-sm font-semibold
-                px-10 py-3 rounded
-                bg-[#00a87a] text-white
-                hover:bg-[#007d5a] transition-colors
-              "
+                            className="inline-block font-outfit text-sm font-semibold px-10 py-3 rounded bg-[#00a87a] text-white hover:bg-[#007d5a] transition-colors"
                         >
                             無料ヒアリングを申し込む
                         </Link>
@@ -280,14 +226,7 @@ export async function generateMetadata({
         openGraph: {
             title: locale === 'ja' ? 'AIエージェント導入パッケージ' : 'AI Agent Onboarding Package',
             url: `https://neurosynch.co.jp/${locale}/services`,
-            images: [
-                {
-                    url: '/og-image.jpg',
-                    width: 1200,
-                    height: 630,
-                    alt: 'Neurosynch',
-                }
-            ]
+            images: [{url: '/og-image.jpg', width: 1200, height: 630, alt: 'Neurosynch'}]
         }
     }
 }

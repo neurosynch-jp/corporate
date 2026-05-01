@@ -1,17 +1,6 @@
 import {getTranslations} from 'next-intl/server'
-import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
-import {renderRichText} from "@storyblok/react"
 import NagoyaSection from '@/components/sections/NagoyaSection'
-
-type CompanyContent = {
-    representative_quote: string
-    representative_message: any
-    mission_headline: string
-    mission_body: string
-    vision_headline: string
-    vision_body: string
-}
 
 export default async function CompanyPage({
                                               params
@@ -19,18 +8,16 @@ export default async function CompanyPage({
     params: Promise<{ locale: string }>
 }) {
     const {locale} = await params
-    const story = await getStory('company', locale)
-    const content = story?.content as CompanyContent | null
     const t = await getTranslations('company')
 
     const infoRows = [
-        {label: t('info_name_label'), value: t('info_name_value')},
+        {label: t('info_name_label'),        value: t('info_name_value')},
         {label: t('info_established_label'), value: t('info_established_value')},
-        {label: t('info_ceo_label'), value: t('info_ceo_value')},
-        {label: t('info_capital_label'), value: t('info_capital_value')},
-        {label: t('info_address_label'), value: t('info_address_value')},
-        {label: t('info_business_label'), value: t('info_business_value')},
-        {label: t('info_url_label'), value: t('info_url_value')},
+        {label: t('info_ceo_label'),         value: t('info_ceo_value')},
+        {label: t('info_capital_label'),     value: t('info_capital_value')},
+        {label: t('info_address_label'),     value: t('info_address_value')},
+        {label: t('info_business_label'),    value: t('info_business_value')},
+        {label: t('info_url_label'),         value: t('info_url_value')},
     ]
 
     return (
@@ -66,10 +53,10 @@ export default async function CompanyPage({
                                     MISSION
                                 </p>
                                 <h2 className="font-outfit text-xl font-bold text-white/92 leading-snug mb-4">
-                                    {content?.mission_headline}
+                                    {t('mission_headline')}
                                 </h2>
                                 <p className="text-sm text-white/50 font-light leading-loose">
-                                    {content?.mission_body}
+                                    {t('mission_body')}
                                 </p>
                             </div>
                         </Reveal>
@@ -82,10 +69,10 @@ export default async function CompanyPage({
                                     VISION
                                 </p>
                                 <h2 className="font-outfit text-xl font-bold text-white/92 leading-snug mb-4">
-                                    {content?.vision_headline}
+                                    {t('vision_headline')}
                                 </h2>
                                 <p className="text-sm text-white/50 font-light leading-loose">
-                                    {content?.vision_body}
+                                    {t('vision_body')}
                                 </p>
                             </div>
                         </Reveal>
@@ -109,12 +96,7 @@ export default async function CompanyPage({
                         {/* プロフィール */}
                         <Reveal>
                             <div className="sticky top-28">
-                                {/* 写真プレースホルダー */}
-                                <div className="
-                  w-48 h-48 rounded-lg mb-6
-                  bg-[#f7f8fa] border border-[#dde2ea]
-                  flex items-center justify-center
-                ">
+                                <div className="w-48 h-48 rounded-lg mb-6 bg-[#f7f8fa] border border-[#dde2ea] flex items-center justify-center">
                                     <div className="text-center">
                                         <div className="w-16 h-16 rounded-full bg-[#dde2ea] mx-auto mb-2"/>
                                         <div className="w-20 h-2 bg-[#dde2ea] rounded mx-auto"/>
@@ -126,14 +108,9 @@ export default async function CompanyPage({
                                 <p className="text-sm text-[#8896aa] font-light mb-3">
                                     {t('representative_name_en')}
                                 </p>
-                                <span className="
-                  inline-block px-3 py-1 rounded-full
-                  bg-[#e6f7f2] text-[#00a87a]
-                  text-xs font-medium
-                  border border-[#00a87a]/20
-                ">
-                  {t('representative_title')}
-                </span>
+                                <span className="inline-block px-3 py-1 rounded-full bg-[#e6f7f2] text-[#00a87a] text-xs font-medium border border-[#00a87a]/20">
+                                    {t('representative_title')}
+                                </span>
                             </div>
                         </Reveal>
 
@@ -142,34 +119,34 @@ export default async function CompanyPage({
                             <div>
                                 {/* 引用文 */}
                                 <div className="flex items-start gap-2 mb-8">
-  <span className="text-[#00a87a] font-outfit text-4xl leading-none mt-1 flex-shrink-0">
-    &ldquo;
-  </span>
+                                    <span className="text-[#00a87a] font-outfit text-4xl leading-none mt-1 flex-shrink-0">
+                                        &ldquo;
+                                    </span>
                                     <p className="font-outfit text-xl font-bold text-[#0f1923] leading-snug">
-                                        {content?.representative_quote}
+                                        {t('representative_quote')}
                                     </p>
-                                    <span
-                                        className="text-[#00a87a] font-outfit text-4xl leading-none self-end flex-shrink-0">
-    &rdquo;
-  </span>
+                                    <span className="text-[#00a87a] font-outfit text-4xl leading-none self-end flex-shrink-0">
+                                        &rdquo;
+                                    </span>
                                 </div>
 
-                                {/* 本文 */}
-                                yy <div
-                                className="richtext text-sm text-[#4a5568] font-light leading-loose"
-                                dangerouslySetInnerHTML={{
-                                    __html: content?.representative_message
-                                        ? String(renderRichText(content.representative_message))
-                                        : ''
-                                }}
-                            />
+                                {/* 本文 - 改行で段落分割 */}
+                                <div className="text-sm text-[#4a5568] font-light leading-loose space-y-5">
+                                    {t('representative_message')
+                                        .split('\n')
+                                        .filter((p: string) => p.trim())
+                                        .map((paragraph: string, i: number) => (
+                                            <p key={i}>{paragraph}</p>
+                                        ))
+                                    }
+                                </div>
 
                                 {/* 署名 */}
                                 <div className="mt-8 pt-6 border-t border-[#dde2ea] text-sm text-[#8896aa] font-light">
-                                    株式会社Neurosynch 代表取締役<br/>
+                                    株式会社ニューロシンク 代表取締役<br/>
                                     <span className="font-medium text-[#4a5568]">
-                    {t('representative_name')}
-                  </span>
+                                        {t('representative_name')}
+                                    </span>
                                 </div>
                             </div>
                         </Reveal>
@@ -196,16 +173,8 @@ export default async function CompanyPage({
                         <table className="w-full border-collapse">
                             <tbody>
                             {infoRows.map((row, i) => (
-                                <tr
-                                    key={i}
-                                    className={`border-b border-[#dde2ea] ${i === 0 ? 'border-t' : ''}`}
-                                >
-                                    <th className="
-                    w-40 py-5 px-6 text-left
-                    text-sm font-medium text-[#8896aa]
-                    bg-white
-                    font-outfit tracking-wide
-                  ">
+                                <tr key={i} className={`border-b border-[#dde2ea] ${i === 0 ? 'border-t' : ''}`}>
+                                    <th className="w-40 py-5 px-6 text-left text-sm font-medium text-[#8896aa] bg-white font-outfit tracking-wide">
                                         {row.label}
                                     </th>
                                     <td className="py-5 px-6 text-sm text-[#4a5568] font-light leading-relaxed bg-white">
@@ -232,19 +201,12 @@ export async function generateMetadata({
     return {
         title: locale === 'ja' ? '会社概要' : 'Company',
         description: locale === 'ja'
-            ? '株式会社Neurosynch。名古屋市南区。代表取締役：久野嘉樹。AIエージェント導入支援・Webアプリ開発。'
+            ? '株式会社ニューロシンク。名古屋市南区。代表取締役：久野嘉樹。AIエージェント導入支援・Webアプリ開発。'
             : 'Neurosynch Co., Ltd. Nagoya. CEO: Yoshiki Kuno. AI agent deployment & web application development.',
         openGraph: {
             title: locale === 'ja' ? '会社概要 | Neurosynch' : 'Company | Neurosynch',
             url: `https://neurosynch.co.jp/${locale}/company`,
-            images: [
-                {
-                    url: '/og-image.jpg',
-                    width: 1200,
-                    height: 630,
-                    alt: 'Neurosynch',
-                }
-            ]
+            images: [{url: '/og-image.jpg', width: 1200, height: 630, alt: 'Neurosynch'}]
         }
     }
 }

@@ -1,12 +1,5 @@
 import {getTranslations} from 'next-intl/server'
-import {getStory} from '@/lib/getStory'
 import Reveal from '@/components/ui/Reveal'
-
-type CareersContent = {
-    philosophy_quote: string
-    philosophy_body: string
-    appeal_text: string
-}
 
 export default async function CareersPage({
                                               params
@@ -14,8 +7,6 @@ export default async function CareersPage({
     params: Promise<{ locale: string }>
 }) {
     const {locale} = await params
-    const story = await getStory('careers', locale)
-    const content = story?.content as CareersContent | null
     const t = await getTranslations('careers')
 
     const features = [
@@ -62,11 +53,7 @@ export default async function CareersPage({
             {/* 現在募集なしバナー */}
             <div className="bg-[#fff8e6] border-t-4 border-b-4 border-[#e0a020] px-16 py-10">
                 <div className="max-w-4xl mx-auto flex items-center gap-6 flex-wrap">
-                    <div className="
-            w-14 h-14 rounded-full flex-shrink-0
-            bg-[#fef3c7] border-2 border-[#f0c040]
-            flex items-center justify-center text-2xl
-          ">
+                    <div className="w-14 h-14 rounded-full flex-shrink-0 bg-[#fef3c7] border-2 border-[#f0c040] flex items-center justify-center text-2xl">
                         ⚠
                     </div>
                     <div className="flex-1">
@@ -77,12 +64,7 @@ export default async function CareersPage({
                             {t('no_hiring_desc')}
                         </p>
                     </div>
-                    <div className="
-            font-outfit text-xs font-semibold tracking-wide
-            px-4 py-2 rounded-full flex-shrink-0
-            bg-[#fef3c7] text-[#92400e]
-            border border-[#f0c040]
-          ">
+                    <div className="font-outfit text-xs font-semibold tracking-wide px-4 py-2 rounded-full flex-shrink-0 bg-[#fef3c7] text-[#92400e] border border-[#f0c040]">
                         {t('no_hiring_badge')}
                     </div>
                 </div>
@@ -96,13 +78,13 @@ export default async function CareersPage({
                             {t('philosophy_label')}
                         </p>
                         <blockquote className="font-outfit text-2xl font-bold text-white/92 leading-snug mb-8 max-w-xl">
-                            {content?.philosophy_quote}
+                            {t('philosophy_quote')}
                         </blockquote>
                         <div className="text-sm text-white/50 font-light leading-loose max-w-xl space-y-4">
-                            {content?.philosophy_body
-                                ?.split('\n')
-                                .filter(p => p.trim())
-                                .map((p, i) => <p key={i}>{p}</p>)
+                            {t('philosophy_body')
+                                .split('\n')
+                                .filter((p: string) => p.trim())
+                                .map((p: string, i: number) => <p key={i}>{p}</p>)
                             }
                         </div>
                     </Reveal>
@@ -139,14 +121,13 @@ export default async function CareersPage({
                                 {/* アピールボックス */}
                                 <div className="bg-[#fff8e6] border-l-4 border-[#e0a020] rounded-r-lg px-5 py-4 mb-0">
                                     <p className="text-sm text-[#7a4f00] font-medium leading-relaxed">
-                                        {content?.appeal_text}
+                                        {t('appeal_text')}
                                     </p>
                                 </div>
                             </div>
 
                             {/* 給与バー */}
-                            <div
-                                className="bg-[#1e3a5f] px-10 py-5 flex items-center justify-between flex-wrap gap-4 mt-6">
+                            <div className="bg-[#1e3a5f] px-10 py-5 flex items-center justify-between flex-wrap gap-4 mt-6">
                                 <div>
                                     <p className="font-outfit text-xs text-white/45 tracking-wide mb-1">
                                         {t('salary_label')}
@@ -158,11 +139,7 @@ export default async function CareersPage({
                                         {t('salary_note')}
                                     </p>
                                 </div>
-                                <div className="
-                  bg-[#4dd4aa] text-[#0d2235]
-                  font-outfit text-xs font-bold
-                  px-4 py-2 rounded-full
-                ">
+                                <div className="bg-[#4dd4aa] text-[#0d2235] font-outfit text-xs font-bold px-4 py-2 rounded-full">
                                     {t('salary_badge')}
                                 </div>
                             </div>
@@ -177,8 +154,7 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {features.map((f, i) => (
-                                            <li key={i}
-                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
                                                 <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2"/>
                                                 {f}
                                             </li>
@@ -193,8 +169,7 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {required.map((r, i) => (
-                                            <li key={i}
-                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
                                                 <span className="w-2 h-2 rounded-full bg-[#00a87a] flex-shrink-0 mt-2"/>
                                                 {r}
                                             </li>
@@ -209,8 +184,7 @@ export default async function CareersPage({
                                     </p>
                                     <ul className="space-y-3">
                                         {preferred.map((p, i) => (
-                                            <li key={i}
-                                                className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
+                                            <li key={i} className="flex items-start gap-3 text-sm text-[#4a5568] font-light leading-relaxed">
                                                 <span className="w-2 h-2 rounded-full bg-[#dde2ea] flex-shrink-0 mt-2"/>
                                                 {p}
                                             </li>
@@ -225,8 +199,7 @@ export default async function CareersPage({
                                     </p>
                                     <div className="grid grid-cols-2 gap-3">
                                         {conditions.map((c, i) => (
-                                            <div key={i}
-                                                 className="bg-[#f7f8fa] rounded-lg px-4 py-3 border border-[#dde2ea]">
+                                            <div key={i} className="bg-[#f7f8fa] rounded-lg px-4 py-3 border border-[#dde2ea]">
                                                 <p className="font-outfit text-[10px] font-semibold tracking-wide text-[#8896aa] mb-1">
                                                     {c.label}
                                                 </p>
@@ -268,12 +241,7 @@ export default async function CareersPage({
                             </p>
                             {[t('prereg_step1'), t('prereg_step2'), t('prereg_step3')].map((step, i) => (
                                 <div key={i} className="flex items-start gap-3 mb-4">
-                                    <div className="
-                    w-6 h-6 rounded-full flex-shrink-0
-                    bg-[#e6f7f2] border border-[#00a87a]/30
-                    text-[#00a87a] font-outfit font-bold text-xs
-                    flex items-center justify-center
-                  ">
+                                    <div className="w-6 h-6 rounded-full flex-shrink-0 bg-[#e6f7f2] border border-[#00a87a]/30 text-[#00a87a] font-outfit font-bold text-xs flex items-center justify-center">
                                         {i + 1}
                                     </div>
                                     <p className="text-sm text-[#4a5568] font-light leading-relaxed">
@@ -312,14 +280,7 @@ export async function generateMetadata({
         openGraph: {
             title: locale === 'ja' ? '採用情報 | Neurosynch' : 'Careers | Neurosynch',
             url: `https://neurosynch.co.jp/${locale}/careers`,
-            images: [
-                {
-                    url: '/og-image.jpg',
-                    width: 1200,
-                    height: 630,
-                    alt: 'Neurosynch',
-                }
-            ]
+            images: [{url: '/og-image.jpg', width: 1200, height: 630, alt: 'Neurosynch'}]
         }
     }
 }
