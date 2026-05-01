@@ -5,7 +5,6 @@ import {routing} from '@/i18n/routing'
 import {notFound} from 'next/navigation'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import N8nChat from '@/components/N8nChat'
 import '../globals.css'
 
 const notoSansJP = Noto_Sans_JP({
@@ -84,7 +83,7 @@ export default async function LocaleLayout({
         <body className={`${notoSansJP.variable} ${outfit.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
             <Header/>
-            <main>{children}<N8nChat/></main>
+            <main>{children}</main>
             <Footer/>
         </NextIntlClientProvider>
         </body>
