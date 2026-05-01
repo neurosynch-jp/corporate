@@ -1,0 +1,16 @@
+/* ===========================================================
+   CountUpNumber 用CSS追記
+   既存の sections.css の .data-card-number 定義の近く、
+   または末尾に追加してください
+=========================================================== */
+
+/* カウントアップ中の数字幅を固定（桁が変わってもガタつかない） */
+.data-card-number .count-up-number {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+/* オプション: data-card-number 自体にも適用したい場合 */
+.data-card-number {
+  font-variant-numeric: tabular-nums;
+}

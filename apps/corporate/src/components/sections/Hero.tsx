@@ -185,7 +185,14 @@ export default function Hero({eyebrow, headline1, headline2, scrollLabel}: HeroP
                 <div className="hero-content">
                     <div className="hero-eyebrow">{eyebrow}</div>
                     <h1 className="hero-copy">
-                        {headline1}<span className="accent-mark">{headline2}</span>
+                        {headline1.startsWith('AI') ? (
+                            <>
+                                <span className="hero-en">AI</span>{headline1.slice(2)}
+                            </>
+                        ) : (
+                            headline1
+                        )}
+                        <span className="accent-mark">{headline2}</span>
                     </h1>
                 </div>
 

@@ -7,7 +7,7 @@
   },
   "hero": {
     "eyebrow": "AI Agent Development",
-    "headline1": "AIの力を、",
+    "headline1": "AIの力を",
     "headline2": "現場に届ける。",
     "scroll": "Scroll"
   },
@@ -79,7 +79,11 @@
         "imageAlt": "介護・医療の現場",
         "pain": "人手不足の中で、スタッフの負担は限界に近づいていませんか?",
         "scenario": "職員30名規模の介護施設。利用者家族からの問い合わせ電話が日中に集中し、本来のケア業務が中断される。AIエージェントが一次対応・記録・職員エスカレーションを担うことで、職員はケアに集中できる時間を取り戻す。",
-        "tags": ["Voice AI", "Auto Logging", "Escalation"],
+        "tags": [
+          "Voice AI",
+          "Auto Logging",
+          "Escalation"
+        ],
         "before": "月80h",
         "after": "月12h"
       },
@@ -89,7 +93,11 @@
         "imageAlt": "建設・製造業の現場",
         "pain": "現場と事務所の情報共有に、毎日時間をとられていませんか?",
         "scenario": "従業員50名規模の金属加工業。FAX注文を事務員が手作業でシステムへ転記し、転記ミスと遅延が頻発。AIエージェントがFAX・メール注文を自動で読み取り、生産管理システムへ反映。事務員は確認業務のみに。",
-        "tags": ["OCR", "Document AI", "System Integration"],
+        "tags": [
+          "OCR",
+          "Document AI",
+          "System Integration"
+        ],
         "before": "月60h",
         "after": "月8h"
       },
@@ -99,7 +107,11 @@
         "imageAlt": "士業・専門職の現場",
         "pain": "書類作業に追われて、本来の仕事に集中できていますか?",
         "scenario": "5名体制の税理士事務所。月次の証憑チェック・仕訳作業に時間を取られ、コンサルティング業務に手が回らない。AIエージェントが領収書・請求書の自動読取と仕訳提案を担い、所員は確認・判断業務に集中できる体制へ。",
-        "tags": ["Document AI", "Auto Classification", "Workflow"],
+        "tags": [
+          "Document AI",
+          "Auto Classification",
+          "Workflow"
+        ],
         "before": "月100h",
         "after": "月25h"
       }
@@ -167,6 +179,28 @@
       ],
       "cta": "無料相談を申し込む"
     }
+  },
+  "philosophy": {
+    "label": "Philosophy",
+    "headline": "社名に込めた、二つの意味。",
+    "layer1": {
+      "num": "Layer 01",
+      "meaning": "AI × 同期",
+      "textBefore": "AIエージェントと社員が、ひとつのリズムで動く。AIに仕事を奪われるのではなく、AIと共に働き、本来の力を発揮する。",
+      "textEm": "人とAIが完璧にシンクロするからこそ、組織は軽やかに、しなやかに、そして強くなる",
+      "textAfter": "。それが、Neurosynchが描く現場の姿です。"
+    },
+    "layer2": {
+      "num": "Layer 02",
+      "meaning": "神経合成 / 自己生成する組織",
+      "textBefore": "AIエージェントの導入は、ゴールではなくスタートです。現場と共に学び、業務の変化に合わせて自らをアップデートし続ける。",
+      "textEm": "あなたの会社が、自ら考え、自ら成長し、自ら修復する組織へと進化していく",
+      "textAfter": "。一度きりの導入では終わらない、生きた仕組みをお届けします。"
+    },
+    "statementBefore": "ITの力であなたの会社を、",
+    "statementEm": "令和の時代を勝ち抜く強い組織",
+    "statementAfter": "にします。",
+    "statementSub": "Our Promise"
   },
   "founder": {
     "label": "Founder",

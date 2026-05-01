@@ -79,7 +79,11 @@
         "imageAlt": "Healthcare and nursing field",
         "pain": "Is your staff's workload reaching its limit amid chronic shortages?",
         "scenario": "A 30-person nursing facility. Inquiries from residents' families concentrate during the day, interrupting essential care. An AI agent handles first-line responses, logging, and staff escalation, giving caregivers their time back to focus on care.",
-        "tags": ["Voice AI", "Auto Logging", "Escalation"],
+        "tags": [
+          "Voice AI",
+          "Auto Logging",
+          "Escalation"
+        ],
         "before": "80h/mo",
         "after": "12h/mo"
       },
@@ -89,7 +93,11 @@
         "imageAlt": "Construction and manufacturing field",
         "pain": "Are you losing hours every day to information gaps between site and office?",
         "scenario": "A 50-employee metal processing company. Office staff manually transcribed FAX orders into the system, with frequent errors and delays. An AI agent now reads FAX and email orders automatically and reflects them in the production system. Staff only verify.",
-        "tags": ["OCR", "Document AI", "System Integration"],
+        "tags": [
+          "OCR",
+          "Document AI",
+          "System Integration"
+        ],
         "before": "60h/mo",
         "after": "8h/mo"
       },
@@ -99,7 +107,11 @@
         "imageAlt": "Professional services field",
         "pain": "Are you so buried in paperwork that you can't focus on real work?",
         "scenario": "A 5-person tax accounting firm. Monthly receipt checks and bookkeeping consumed time, leaving no room for advisory work. An AI agent now automates receipt and invoice reading and journal entry suggestions, freeing staff to focus on review and judgment.",
-        "tags": ["Document AI", "Auto Classification", "Workflow"],
+        "tags": [
+          "Document AI",
+          "Auto Classification",
+          "Workflow"
+        ],
         "before": "100h/mo",
         "after": "25h/mo"
       }
@@ -167,6 +179,28 @@
       ],
       "cta": "Request a free consultation"
     }
+  },
+  "philosophy": {
+    "label": "Philosophy",
+    "headline": "Two meanings, woven into our name.",
+    "layer1": {
+      "num": "Layer 01",
+      "meaning": "AI × Synchronization",
+      "textBefore": "AI agents and employees move to the same rhythm. Rather than losing work to AI, your team works alongside it and brings out its true strength. ",
+      "textEm": "When people and AI synchronize, the organization becomes lighter, more agile, and stronger",
+      "textAfter": ". That is the field Neurosynch envisions."
+    },
+    "layer2": {
+      "num": "Layer 02",
+      "meaning": "Synthesis / a self-generating organization",
+      "textBefore": "Deploying an AI agent is the start, not the goal. It learns alongside your team and continuously updates itself as your business evolves. ",
+      "textEm": "Your company evolves into an organization that thinks, grows, and repairs itself",
+      "textAfter": ". We deliver a living system, not a one-time installation."
+    },
+    "statementBefore": "We use the power of IT to make your company ",
+    "statementEm": "an organization strong enough to win the new era",
+    "statementAfter": ".",
+    "statementSub": "Our Promise"
   },
   "founder": {
     "label": "Founder",

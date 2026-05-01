@@ -1,5 +1,6 @@
 import {getTranslations} from 'next-intl/server'
 import Reveal from '@/components/Reveal'
+import CountUpNumber from '@/components/CountUpNumber'
 
 interface ProblemItem {
     number: string
@@ -9,8 +10,6 @@ interface ProblemItem {
 
 export default async function Problem() {
     const t = await getTranslations('problem')
-
-    // 配列データは raw() で取得
     const items = t.raw('items') as ProblemItem[]
 
     return (
@@ -30,7 +29,8 @@ export default async function Problem() {
                         <div className="data-card">
                             <div className="data-card-label">{t('data.card1.label')}</div>
                             <div className="data-card-number">
-                                {t('data.card1.value')}<span className="unit">{t('data.card1.unit')}</span>
+                                <CountUpNumber target={t('data.card1.value')}/>
+                                <span className="unit">{t('data.card1.unit')}</span>
                             </div>
                             <div className="data-card-desc">{t('data.card1.desc')}</div>
                             <div className="data-card-source">{t('data.card1.source')}</div>
@@ -39,7 +39,8 @@ export default async function Problem() {
                         <div className="data-card highlight">
                             <div className="data-card-label">{t('data.card2.label')}</div>
                             <div className="data-card-number">
-                                {t('data.card2.value')}<span className="unit">{t('data.card2.unit')}</span>
+                                <CountUpNumber target={t('data.card2.value')}/>
+                                <span className="unit">{t('data.card2.unit')}</span>
                             </div>
                             <div className="data-card-desc">{t('data.card2.desc')}</div>
                             <div className="data-card-source">{t('data.card2.source')}</div>
@@ -48,7 +49,8 @@ export default async function Problem() {
                         <div className="data-card">
                             <div className="data-card-label">{t('data.card3.label')}</div>
                             <div className="data-card-number">
-                                {t('data.card3.value')}<span className="unit">{t('data.card3.unit')}</span>
+                                <CountUpNumber target={t('data.card3.value')}/>
+                                <span className="unit">{t('data.card3.unit')}</span>
                             </div>
                             <div className="data-card-desc">{t('data.card3.desc')}</div>
                             <div className="data-card-source">{t('data.card3.source')}</div>
@@ -87,8 +89,7 @@ export default async function Problem() {
                     <div className="closing-statement">
                         <p className="closing-text">
                             {t('closingLine1')}<br/>
-                            {t('closingLine2Before')}<span
-                            className="em">{t('closingLine2Em')}</span>{t('closingLine2After')}
+                            {t('closingLine2Before')}<span className="em">{t('closingLine2Em')}</span>{t('closingLine2After')}
                         </p>
                     </div>
                 </Reveal>

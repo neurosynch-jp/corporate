@@ -2,7 +2,7 @@ import Hero from '@/components/sections/Hero'
 import Problem from '@/components/sections/Problem'
 import Target from '@/components/sections/Target'
 import Solution from '@/components/sections/Solution'
-import Founder from '@/components/sections/Founder'
+import Philosophy from '@/components/sections/Philosophy'
 import {getTranslations} from 'next-intl/server'
 
 export default async function HomePage({
@@ -23,7 +23,7 @@ export default async function HomePage({
             <Problem/>
             <Target/>
             <Solution/>
-            <Founder/>
+            <Philosophy/>
         </>
     )
 }
