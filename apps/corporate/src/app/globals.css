@@ -1,48 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --navy: #1e3a5f;
+    --navy-deep: #0a1420;
+    --accent: #00a87a;
+    --accent-light: #e6f7f2;
+    --accent-dark: #007d5a;
+    --text: #0f1923;
+    --text-sec: #4a5568;
+    --text-ter: #8896aa;
+    --border: #dde2ea;
+    --bg: #f7f8fa;
+    --white: #ffffff;
+
+    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-en: 'Outfit', sans-serif;
+    --font-display: 'Zen Kaku Gothic Antique', 'Noto Sans JP', sans-serif;
+
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .reveal-target {
-  will-change: opacity, transform;
+    will-change: opacity, transform;
 }
 
 .richtext p {
-  margin-bottom: 1.25rem;
-  line-height: 2;
+    margin-bottom: 1.25rem;
+    line-height: 2;
 }
+
 .richtext strong {
-  font-weight: 500;
-  color: #0f1923;
+    font-weight: 500;
+    color: #0f1923;
 }
+
 .richtext ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
 }
+
 .richtext li {
-  margin-bottom: 0.5rem;
-  line-height: 1.8;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
 }

@@ -1,149 +1,205 @@
-'use client'
+'use client';
 
-import {useTranslations} from 'next-intl'
-import {Link} from '@/i18n/routing'
-import {useState, useEffect} from 'react'
-import Image from 'next/image'
+import {useEffect, useRef} from 'react';
 
-type HeroProps = {
-    headline1: string
-    headline2: string
-    sub: string
+interface HeroProps {
+    eyebrow: string;
+    headline1: string;
+    headline2: string;
+    scrollLabel: string;
 }
 
-const slides = [
-    {
-        key: 'office' as const,
-        industry: {ja: '士業・専門職', en: 'Professional Services'},
-        pain: {
-            ja: '書類作業に追われて、本来の仕事に集中できていますか？',
-            en: 'Are you overwhelmed by paperwork?'
-        },
-        bg: 'from-[#0d1e35] to-[#102a45]',
-        src: '/images/hero/pixta_116516966_L.jpg', // pixta_118019384_L.jpg, pixta_122358650_L.jpg
-    },
-    {
-        key: 'care' as const,
-        industry: {ja: '介護・医療', en: 'Healthcare & Nursing'},
-        pain: {
-            ja: '人手不足の中で、スタッフの負担は限界に近づいていませんか？',
-            en: 'Is staff workload reaching its limit?'
-        },
-        bg: 'from-[#0d1e2e] to-[#0e2438]',
-        src: '/images/hero/pixta_105426077_L.jpg', // pixta_83266689_L.jpg, pixta_117727393_L.jpg
-    },
-    {
-        key: 'construction' as const,
-        industry: {ja: '建設・製造業', en: 'Construction & Manufacturing'},
-        pain: {
-            ja: '現場と事務所の情報共有に、毎日時間をとられていませんか？',
-            en: 'Losing hours to information gaps every day?'
-        },
-        bg: 'from-[#1a1208] to-[#221808]',
-        src: '/images/hero/pixta_127341411_L.jpg', // pixta_127341411_L.jpg, pixta_30008756_L.jpg
-    },
-]
-
-export default function Hero({headline1, headline2}: HeroProps) {
-    const t = useTranslations('hero')
-    const [current, setCurrent] = useState(0)
+export default function Hero({eyebrow, headline1, headline2, scrollLabel}: HeroProps) {
+    const scrollBtnRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrent(prev => (prev + 1) % slides.length)
-        }, 5000)
-        return () => clearInterval(timer)
-    }, [])
+        const handleScroll = () => {
+            const problemSection = document.getElementById('problem');
+            problemSection?.scrollIntoView({behavior: 'smooth', block: 'start'});
+        };
+
+        const btn = scrollBtnRef.current;
+        btn?.addEventListener('click', handleScroll);
+        return () => btn?.removeEventListener('click', handleScroll);
+    }, []);
 
     return (
-        <section className="relative w-full h-screen min-h-[600px] overflow-hidden">
+        <>
+            <section className="hero" id="hero">
+                <div className="hero-glow glow-1"></div>
+                <div className="hero-glow glow-2"></div>
 
-            {/* 背景写真（全スライド重ねてCSSで切り替え） */}
-            {slides.map((s, i) => (
-                <div
-                    key={s.key}
-                    className={`
-            absolute inset-0
-            transition-opacity duration-1000 ease-in-out
-            ${i === current ? 'opacity-100' : 'opacity-0'}
-          `}
+                <div className="hero-3d-scene">
+                    <div className="geo-layer geo-layer-1">
+                        <svg viewBox="-400 -400 800 800" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" stroke="rgba(0, 168, 122, 0.35)" strokeWidth="1">
+                                <polygon className="geo-pulse"
+                                         points="350,0 175,303 -175,303 -350,0 -175,-303 175,-303"/>
+                                <polygon className="geo-pulse"
+                                         points="303,175 0,350 -303,175 -303,-175 0,-350 303,-175"
+                                         stroke="rgba(255, 255, 255, 0.15)"/>
+                                <polygon className="geo-pulse" points="0,-300 260,150 -260,150"
+                                         stroke="rgba(0, 168, 122, 0.25)"/>
+                                <polygon className="geo-pulse" points="0,300 260,-150 -260,-150"
+                                         stroke="rgba(255, 255, 255, 0.12)"/>
+                            </g>
+                            <g fill="rgba(0, 168, 122, 0.6)">
+                                <circle cx="350" cy="0" r="3"/>
+                                <circle cx="175" cy="303" r="3"/>
+                                <circle cx="-175" cy="303" r="3"/>
+                                <circle cx="-350" cy="0" r="3"/>
+                                <circle cx="-175" cy="-303" r="3"/>
+                                <circle cx="175" cy="-303" r="3"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div className="geo-layer geo-layer-2">
+                        <svg viewBox="-550 -550 1100 1100" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none">
+                                <circle className="geo-pulse" cx="0" cy="0" r="500"
+                                        stroke="rgba(255, 255, 255, 0.1)" strokeWidth="1"/>
+                                <circle className="geo-pulse" cx="0" cy="0" r="420"
+                                        stroke="rgba(0, 168, 122, 0.2)" strokeWidth="1" strokeDasharray="2 6"/>
+                                <circle className="geo-pulse" cx="0" cy="0" r="340"
+                                        stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1"/>
+                            </g>
+                            <g fill="rgba(0, 168, 122, 0.7)">
+                                <circle cx="500" cy="0" r="4"/>
+                                <circle cx="-420" cy="0" r="3"/>
+                                <circle cx="0" cy="340" r="3"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div className="geo-layer geo-layer-3">
+                        <svg viewBox="-300 -300 600 600" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" stroke="rgba(0, 168, 122, 0.3)" strokeWidth="1.5">
+                                <polygon className="geo-pulse"
+                                         points="0,-250 65,-65 250,0 65,65 0,250 -65,65 -250,0 -65,-65"/>
+                                <polygon className="geo-pulse" points="120,0 60,104 -60,104 -120,0 -60,-104 60,-104"
+                                         stroke="rgba(255, 255, 255, 0.2)"/>
+                            </g>
+                            <g stroke="rgba(0, 168, 122, 0.15)" strokeWidth="0.5">
+                                <line x1="0" y1="-250" x2="0" y2="-120"/>
+                                <line x1="250" y1="0" x2="120" y2="0"/>
+                                <line x1="0" y1="250" x2="0" y2="120"/>
+                                <line x1="-250" y1="0" x2="-120" y2="0"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div className="geo-layer geo-layer-4">
+                        <svg viewBox="-700 -700 1400 1400" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none">
+                                <circle cx="0" cy="0" r="650"
+                                        stroke="rgba(255, 255, 255, 0.06)" strokeWidth="1" strokeDasharray="1 8"/>
+                                <circle cx="0" cy="0" r="580"
+                                        stroke="rgba(0, 168, 122, 0.1)" strokeWidth="0.5" strokeDasharray="3 12"/>
+                            </g>
+                            <g fill="rgba(255, 255, 255, 0.4)">
+                                <circle cx="650" cy="0" r="2"/>
+                                <circle cx="-460" cy="460" r="2"/>
+                                <circle cx="0" cy="-650" r="2"/>
+                                <circle cx="460" cy="-460" r="2"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <svg className="hero-canvas" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stopColor="#00a87a" stopOpacity="1"/>
+                            <stop offset="100%" stopColor="#00a87a" stopOpacity="0"/>
+                        </radialGradient>
+                        <radialGradient id="nodeGradWhite" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8"/>
+                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0"/>
+                        </radialGradient>
+                    </defs>
+                    <g stroke="rgba(0, 168, 122, 0.25)" strokeWidth="1" fill="none">
+                        <line className="flow-line" x1="200" y1="200" x2="600" y2="350"/>
+                        <line className="flow-line" x1="600" y1="350" x2="950" y2="200"/>
+                        <line className="flow-line" x1="950" y1="200" x2="1400" y2="380"/>
+                        <line className="flow-line" x1="1400" y1="380" x2="1700" y2="250"/>
+                        <line className="flow-line" x1="200" y1="200" x2="450" y2="650"/>
+                        <line className="flow-line" x1="450" y1="650" x2="800" y2="800"/>
+                        <line className="flow-line" x1="800" y1="800" x2="1200" y2="700"/>
+                        <line className="flow-line" x1="1200" y1="700" x2="1600" y2="850"/>
+                        <line className="flow-line" x1="600" y1="350" x2="800" y2="800"/>
+                        <line className="flow-line" x1="950" y1="200" x2="1200" y2="700"/>
+                        <line className="flow-line" x1="1400" y1="380" x2="1600" y2="850"/>
+                        <line className="flow-line" x1="450" y1="650" x2="200" y2="900"/>
+                    </g>
+                    <g stroke="rgba(255, 255, 255, 0.08)" strokeWidth="0.5" fill="none">
+                        <line x1="200" y1="200" x2="950" y2="200"/>
+                        <line x1="600" y1="350" x2="1400" y2="380"/>
+                        <line x1="450" y1="650" x2="1200" y2="700"/>
+                        <line x1="800" y1="800" x2="1600" y2="850"/>
+                    </g>
+                    <g>
+                        <circle className="node-pulse" cx="200" cy="200" r="4" fill="url(#nodeGrad)"/>
+                        <circle className="node-pulse" cx="600" cy="350" r="6" fill="url(#nodeGradWhite)"/>
+                        <circle className="node-pulse" cx="950" cy="200" r="5" fill="url(#nodeGrad)"/>
+                        <circle className="node-pulse" cx="1400" cy="380" r="4" fill="url(#nodeGradWhite)"/>
+                        <circle className="node-pulse" cx="1700" cy="250" r="5" fill="url(#nodeGrad)"/>
+                        <circle className="node-pulse" cx="450" cy="650" r="5" fill="url(#nodeGradWhite)"/>
+                        <circle className="node-pulse" cx="800" cy="800" r="6" fill="url(#nodeGrad)"/>
+                        <circle className="node-pulse" cx="1200" cy="700" r="4" fill="url(#nodeGradWhite)"/>
+                        <circle className="node-pulse" cx="1600" cy="850" r="5" fill="url(#nodeGrad)"/>
+                        <circle className="node-pulse" cx="200" cy="900" r="4" fill="url(#nodeGradWhite)"/>
+                    </g>
+                    <g fill="rgba(255, 255, 255, 0.2)">
+                        <circle cx="350" cy="450" r="1.5"/>
+                        <circle cx="1100" cy="500" r="1.5"/>
+                        <circle cx="1500" cy="600" r="1.5"/>
+                        <circle cx="700" cy="550" r="1.5"/>
+                        <circle cx="1300" cy="900" r="1.5"/>
+                        <circle cx="500" cy="850" r="1.5"/>
+                    </g>
+                </svg>
+
+                <nav className="hero-nav">
+                    <a href="/" className="hero-logo" aria-label="Neurosynch">
+                        <svg viewBox="0 0 560 90" xmlns="http://www.w3.org/2000/svg">
+                            <text
+                                fontFamily="'Outfit', sans-serif"
+                                fontWeight="700"
+                                fontSize="85"
+                                fill="currentColor"
+                                x="0"
+                                y="70"
+                                letterSpacing="12"
+                            >neurosynch
+                            </text>
+                        </svg>
+                    </a>
+                    <button className="hero-menu-btn" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+
+                <div className="hero-content">
+                    <div className="hero-eyebrow">{eyebrow}</div>
+                    <h1 className="hero-copy">
+                        {headline1}<span className="accent-mark">{headline2}</span>
+                    </h1>
+                </div>
+
+                <button
+                    ref={scrollBtnRef}
+                    className="hero-scroll"
+                    aria-label="Scroll to next section"
                 >
-                    <Image
-                        src={s.src}
-                        alt={s.industry.ja}
-                        fill
-                        sizes="100vw"
-                        className="object-cover object-center"
-                        priority={i === 0}
-                    />
-                </div>
-            ))}
+                    {scrollLabel}
+                    <span className="hero-scroll-line"></span>
+                </button>
+            </section>
 
-            {/* 暗いオーバーレイ（テキストを読みやすくする） */}
-            <div className="absolute inset-0 bg-black/50"/>
-
-            {/* 左下グラデーション（テキストエリアをより読みやすく） */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"/>
-
-            {/* コンテンツ */}
-            <div className="relative z-10 h-full flex flex-col justify-end px-8 md:px-16 pb-20 md:pb-24">
-
-                {/* 業種ラベル */}
-                <p className="font-outfit text-xs font-semibold tracking-[.22em] text-[#00c896] mb-4">
-                    {slides[current].industry.ja}
-                </p>
-
-                {/* メインキャッチコピー */}
-                <h1 className="font-outfit font-bold leading-tight tracking-tight text-white mb-4
-          text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                    <span className="block">{headline1}</span>
-                    <span className="block">{headline2}</span>
-                </h1>
-
-                {/* サブテキスト */}
-                <p className="text-sm md:text-base leading-loose text-white/75 font-light mb-8 max-w-lg">
-                    {slides[current].pain.ja}
-                </p>
-
-                {/* CTAボタン */}
-                <div className="flex flex-col sm:flex-row gap-3 mb-10">
-                    <Link
-                        href="/contact"
-                        className="
-              font-outfit text-sm font-semibold
-              px-8 py-3 bg-[#00a87a] text-white rounded
-              text-center
-              transition-all hover:bg-[#007d5a] hover:-translate-y-px
-            "
-                    >
-                        {t('cta_primary')}
-                    </Link>
-                    <Link
-                        href="/services"
-                        className="
-              font-outfit text-sm font-medium
-              px-8 py-3 rounded text-center
-              border border-white/40 text-white/85
-              transition-all hover:border-white hover:text-white
-            "
-                    >
-                        {t('cta_secondary')}
-                    </Link>
-                </div>
-
-                {/* スライドドット */}
-                <div className="flex gap-3">
-                    {slides.map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setCurrent(i)}
-                            className={`h-[3px] rounded-sm transition-all duration-300 ${
-                                i === current ? 'w-11 bg-[#00a87a]' : 'w-7 bg-white/40'
-                            }`}
-                        />
-                    ))}
-                </div>
-            </div>
-        </section>
-    )
+            <div className="hero-transition-band"></div>
+        </>
+    );
 }

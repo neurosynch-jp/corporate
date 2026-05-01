@@ -1,75 +1,110 @@
-import { useTranslations } from 'next-intl'
-import Reveal from '@/components/ui/Reveal'
+import {getTranslations} from 'next-intl/server'
+import Reveal from '@/components/Reveal'
 
-export default function Solution() {
-    const t = useTranslations('solution')
-    const points = [t('point1'), t('point2'), t('point3')]
+interface FlowStep {
+    num: string
+    title: string
+    desc: string
+    meta: string
+}
+
+// アイコンSVGはコード側で固定管理（i18n対象外）
+const flowIcons = [
+    (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+    ),
+    (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+        </svg>
+    ),
+    (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+        </svg>
+    ),
+    (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M21 12a9 9 0 1 1-6.2-8.55"/>
+            <polyline points="21 4 21 12 13 12"/>
+        </svg>
+    ),
+]
+
+export default async function Solution() {
+    const t = await getTranslations('solution')
+    const flowSteps = t.raw('flowSteps') as FlowStep[]
+    const includes = t.raw('pricing.includes') as string[]
 
     return (
-        <section className="bg-white py-20 px-6 md:px-16 border-t border-b border-[#dde2ea]">
-            <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                {/* ビジュアル */}
+        <section className="solution" id="solution">
+            <div className="solution-container">
                 <Reveal>
-                    <div className="relative h-64 lg:h-72 flex items-center justify-center">
-                        <div className="absolute w-64 lg:w-72 h-64 lg:h-72 rounded-full border border-[#00a87a]/18" />
-                        <div className="absolute w-48 lg:w-52 h-48 lg:h-52 rounded-full border border-[#00a87a]/30 animate-spin [animation-duration:22s]" />
-                        <div className="absolute w-28 lg:w-32 h-28 lg:h-32 rounded-full border border-[#00a87a]/50 bg-[#00a87a]/5" />
-                        <div className="relative text-center z-10">
-                            <p className="font-outfit text-[10px] font-semibold tracking-[.16em] text-[#00a87a]">
-                                AI AGENT
-                            </p>
-                            <p className="font-outfit text-base font-bold text-[#0f1923] mt-1">
-                                御社の業務
-                            </p>
+                    <div className="section-label">{t('label')}</div>
+                </Reveal>
+                <Reveal>
+                    <h2 className="solution-headline">
+                        {t('headlineBefore')}<span className="em">{t('headlineEm')}</span>{t('headlineAfter')}<br/>
+                        {t('headlineLine2')}
+                    </h2>
+                </Reveal>
+                <Reveal>
+                    <p className="solution-lead">
+                        {t('leadLine1')}<br/>
+                        {t('leadLine2')}
+                    </p>
+                </Reveal>
+
+                <Reveal>
+                    <div className="flow-wrapper">
+                        <div className="flow-label">{t('flowLabel')}</div>
+                        <h3 className="flow-title">{t('flowTitle')}</h3>
+
+                        <div className="flow-steps">
+                            {flowSteps.map((step, idx) => (
+                                <div key={step.num} className="flow-step">
+                                    <div className="flow-step-num">{step.num}</div>
+                                    <div className="flow-step-icon">{flowIcons[idx]}</div>
+                                    <h4 className="flow-step-title">{step.title}</h4>
+                                    <p className="flow-step-desc">{step.desc}</p>
+                                    <div className="flow-step-meta">{step.meta}</div>
+                                </div>
+                            ))}
                         </div>
-                        {[
-                            { label: 'ヒアリング・設計', pos: 'top-[4%] left-1/2 -translate-x-1/2' },
-                            { label: '構築・開発',       pos: 'top-1/2 right-0 -translate-y-1/2' },
-                            { label: '運用・改善',       pos: 'bottom-[4%] left-1/2 -translate-x-1/2' },
-                            { label: 'サポート',         pos: 'top-1/2 left-0 -translate-y-1/2' },
-                        ].map(node => (
-                            <div
-                                key={node.label}
-                                className={`
-                  absolute ${node.pos}
-                  bg-white border border-[#00a87a]/28 rounded
-                  px-2 lg:px-3 py-1 lg:py-1.5
-                  font-outfit text-[10px] lg:text-[11px] text-[#4a5568]
-                  shadow-sm whitespace-nowrap
-                `}
-                            >
-                                {node.label}
-                            </div>
-                        ))}
                     </div>
                 </Reveal>
 
-                {/* テキスト */}
-                <Reveal delay={150}>
-                    <div>
-                        <p className="font-outfit text-xs font-semibold tracking-[.22em] text-[#00a87a] mb-4">
-                            {t('label')}
-                        </p>
-                        <h2 className="font-outfit text-2xl md:text-3xl font-bold leading-snug text-[#0f1923] mb-6 whitespace-pre-line">
-                            {t('title')}
-                        </h2>
-                        <p className="text-sm text-[#4a5568] leading-loose font-light mb-8">
-                            {t('desc')}
-                        </p>
-                        <div className="flex flex-col gap-4">
-                            {points.map((point, i) => (
-                                <div key={i} className="flex items-start gap-3 text-sm">
-                                    <div className="
-                    w-5 h-5 rounded-full flex-shrink-0 mt-0.5
-                    bg-[#e6f7f2] border border-[#00a87a]/30
-                    flex items-center justify-center
-                    text-[#00a87a] text-[10px]
-                  ">
-                                        ✓
-                                    </div>
-                                    <p className="text-[#4a5568] font-light leading-relaxed">{point}</p>
-                                </div>
-                            ))}
+                <Reveal>
+                    <div className="pricing-block">
+                        <div className="pricing-left">
+                            <div className="pricing-eyebrow">{t('pricing.eyebrow')}</div>
+                            <div className="pricing-original">{t('pricing.original')}</div>
+                            <div className="pricing-amount">
+                                <span className="pricing-prefix">{t('pricing.prefix')}</span>
+                                <span className="pricing-number">{t('pricing.number')}</span>
+                                <span className="pricing-suffix">{t('pricing.suffix')}</span>
+                                <span className="pricing-tilde">{t('pricing.tilde')}</span>
+                            </div>
+                            <p className="pricing-note">
+                                <strong>{t('pricing.noteEm')}</strong>{t('pricing.noteRest1')}<br/>
+                                {t('pricing.noteRest2')}
+                            </p>
+                        </div>
+
+                        <div className="pricing-right">
+                            <h4>{t('pricing.includesTitle')}</h4>
+                            <ul className="pricing-includes">
+                                {includes.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
+                            <a href="/contact" className="pricing-cta">{t('pricing.cta')}</a>
                         </div>
                     </div>
                 </Reveal>

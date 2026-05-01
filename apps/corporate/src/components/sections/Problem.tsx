@@ -1,58 +1,97 @@
-import { useTranslations } from 'next-intl'
-import Reveal from '@/components/ui/Reveal'
+import {getTranslations} from 'next-intl/server'
+import Reveal from '@/components/Reveal'
 
-export default function Problem() {
-    const t = useTranslations('problem')
+interface ProblemItem {
+    number: string
+    title: string
+    desc: string
+}
 
-    const barriers = [
-        { num: '01', title: t('barrier1_title'), desc: t('barrier1_desc') },
-        { num: '02', title: t('barrier2_title'), desc: t('barrier2_desc') },
-        { num: '03', title: t('barrier3_title'), desc: t('barrier3_desc') },
-    ]
+export default async function Problem() {
+    const t = await getTranslations('problem')
+
+    // 配列データは raw() で取得
+    const items = t.raw('items') as ProblemItem[]
 
     return (
-        <section className="py-20 px-6 md:px-16 bg-[#f7f8fa]">
-            <div className="max-w-4xl mx-auto">
+        <section className="problem" id="problem">
+            <div className="problem-container">
                 <Reveal>
-                    <p className="font-outfit text-xs font-semibold tracking-[.22em] text-[#00a87a] mb-4">
-                        {t('label')}
-                    </p>
-                    <h2 className="font-outfit text-2xl md:text-3xl font-bold leading-snug text-[#0f1923] mb-6 whitespace-pre-line">
-                        {t('title')}
-                    </h2>
-                    <p className="text-sm text-[#4a5568] leading-loose font-light max-w-lg mb-10">
-                        {t('lead')}
-                    </p>
+                    <div className="section-label">{t('label1')}</div>
                 </Reveal>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    {barriers.map((barrier, i) => (
-                        <Reveal key={barrier.num} delay={i * 100}>
-                            <div className="
-                group p-7
-                bg-white border border-[#dde2ea] rounded-lg
-                relative overflow-hidden
-                transition-all duration-200
-                hover:border-[#00a87a] hover:shadow-lg
-              ">
-                                <div className="
-                  absolute top-0 left-0 right-0 h-[3px]
-                  bg-[#00a87a] opacity-0
-                  transition-opacity duration-200
-                  group-hover:opacity-100
-                " />
-                                <p className="font-outfit text-4xl font-bold text-[#00a87a]/13 leading-none mb-3">
-                                    {barrier.num}
-                                </p>
-                                <h3 className="text-sm font-bold text-[#0f1923] mb-2">
-                                    {barrier.title}
-                                </h3>
-                                <p className="text-xs text-[#4a5568] leading-relaxed font-light">
-                                    {barrier.desc}
-                                </p>
+                <Reveal>
+                    <h2 className="problem-headline">
+                        {t('headline1Line1')}<br/>{t('headline1Line2')}
+                    </h2>
+                </Reveal>
+
+                <Reveal>
+                    <div className="data-grid">
+                        <div className="data-card">
+                            <div className="data-card-label">{t('data.card1.label')}</div>
+                            <div className="data-card-number">
+                                {t('data.card1.value')}<span className="unit">{t('data.card1.unit')}</span>
                             </div>
-                        </Reveal>
-                    ))}
+                            <div className="data-card-desc">{t('data.card1.desc')}</div>
+                            <div className="data-card-source">{t('data.card1.source')}</div>
+                        </div>
+
+                        <div className="data-card highlight">
+                            <div className="data-card-label">{t('data.card2.label')}</div>
+                            <div className="data-card-number">
+                                {t('data.card2.value')}<span className="unit">{t('data.card2.unit')}</span>
+                            </div>
+                            <div className="data-card-desc">{t('data.card2.desc')}</div>
+                            <div className="data-card-source">{t('data.card2.source')}</div>
+                        </div>
+
+                        <div className="data-card">
+                            <div className="data-card-label">{t('data.card3.label')}</div>
+                            <div className="data-card-number">
+                                {t('data.card3.value')}<span className="unit">{t('data.card3.unit')}</span>
+                            </div>
+                            <div className="data-card-desc">{t('data.card3.desc')}</div>
+                            <div className="data-card-source">{t('data.card3.source')}</div>
+                        </div>
+                    </div>
+                </Reveal>
+
+                <div className="problems-section">
+                    <Reveal>
+                        <div className="section-label">{t('label2')}</div>
+                    </Reveal>
+                    <Reveal>
+                        <h3 className="problem-headline"
+                            style={{fontSize: 'clamp(24px, 3vw, 36px)', marginBottom: '32px'}}>
+                            {t('headline2')}
+                        </h3>
+                    </Reveal>
+                    <Reveal>
+                        <p className="problems-intro">{t('intro')}</p>
+                    </Reveal>
+
+                    <div className="problems-list">
+                        {items.map((item) => (
+                            <Reveal key={item.number}>
+                                <div className="problem-item">
+                                    <div className="problem-number">{item.number}</div>
+                                    <h4 className="problem-title">{item.title}</h4>
+                                    <p className="problem-desc">{item.desc}</p>
+                                </div>
+                            </Reveal>
+                        ))}
+                    </div>
                 </div>
+
+                <Reveal>
+                    <div className="closing-statement">
+                        <p className="closing-text">
+                            {t('closingLine1')}<br/>
+                            {t('closingLine2Before')}<span
+                            className="em">{t('closingLine2Em')}</span>{t('closingLine2After')}
+                        </p>
+                    </div>
+                </Reveal>
             </div>
         </section>
     )

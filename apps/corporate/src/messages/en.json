@@ -6,46 +6,187 @@
     "contact": "Free Consultation"
   },
   "hero": {
-    "eyebrow": "NEUROSYNCH — AI AGENT SOLUTION",
-    "headline1": "Bringing Advanced",
-    "headline2": "Technology to SMEs.",
-    "sub": "Are you overwhelmed by paperwork instead of focusing on your core business? AI agents will transform the way you work.",
-    "cta_primary": "Book a Free Consultation",
-    "cta_secondary": "View Services"
-  },
-  "stats": {
-    "stat1_num": "~70%",
-    "stat1_label": "of Japanese SMEs have yet\nto digitize their operations",
-    "stat2_num": "¥2M+",
-    "stat2_label": "minimum cost when requesting\na typical system development firm",
-    "stat3_num": "¥300K",
-    "stat3_label": "Neurosynch's\nAI Agent introductory price"
+    "eyebrow": "AI Agent Development",
+    "headline1": "AI Power, ",
+    "headline2": "Delivered to the Field.",
+    "scroll": "Scroll"
   },
   "problem": {
-    "label": "THE PROBLEM",
-    "title": "Why is IT adoption\nstalling in SMEs?",
-    "lead": "The reason is simple. Systems designed for large enterprises don't fit small businesses. The cost, complexity, and overhead are all overkill.",
-    "barrier1_title": "Too Expensive",
-    "barrier1_desc": "Typical system development starts at ¥2–3M. That's not a price SMEs can afford to experiment with.",
-    "barrier2_title": "Too Complex",
-    "barrier2_desc": "Requirements, design, development, testing — without a dedicated IT team, it's simply unmanageable.",
-    "barrier3_title": "Abandoned After Delivery",
-    "barrier3_desc": "Once delivered, you're on your own. No one follows up when you can't figure it out. That's the reality."
+    "label1": "The Reality",
+    "headline1Line1": "Japan's DX is",
+    "headline1Line2": "still just beginning.",
+    "data": {
+      "card1": {
+        "label": "See the Need",
+        "value": "79",
+        "unit": "%",
+        "desc": "of SME executives recognize the necessity of DX and IT adoption.",
+        "source": "— White Paper on Small Enterprises (reference)"
+      },
+      "card2": {
+        "label": "Actually Progressing",
+        "value": "15",
+        "unit": "%",
+        "desc": "Yet only a limited number of SMEs have started DX and seen results.",
+        "source": "— METI DX Report (reference)"
+      },
+      "card3": {
+        "label": "Untouched / Considering",
+        "value": "64",
+        "unit": "%",
+        "desc": "Many companies remain stuck without taking the first step.",
+        "source": "— IPA DX Trends Survey (reference)"
+      }
+    },
+    "label2": "Why It's Stuck",
+    "headline2": "Why doesn't it move forward?",
+    "intro": "The need is understood. But there are three insurmountable walls in the field.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Packaged products don't fit the work.",
+        "desc": "Off-the-shelf SaaS and packaged products are built for the \"average company.\" They don't fit the unique workflows that have been built up over years on the ground."
+      },
+      {
+        "number": "02",
+        "title": "Initial setup requires expertise.",
+        "desc": "The first hurdle is too high. Just reading manuals and configuring takes weeks. Executives who can't pause their core business simply don't have that time."
+      },
+      {
+        "number": "03",
+        "title": "No one in-house can lead the way.",
+        "desc": "Small businesses can't afford a dedicated IT department like large corporations. Without a clear leader for DX, time keeps slipping by."
+      }
+    ],
+    "closingLine1": "What's needed is not an off-the-shelf product.",
+    "closingLine2Before": "It's a ",
+    "closingLine2Em": "purpose-built AI agent",
+    "closingLine2After": " designed for your field."
+  },
+  "target": {
+    "label": "For Whom",
+    "headlineLine1": "These are the fields",
+    "headlineLine2": "we want to change.",
+    "leadLine1": "Small and medium-sized enterprises rooted in their communities, supporting daily operations.",
+    "leadLine2": "Here's how AI agents work in each setting, with anticipated outcomes from deployment.",
+    "scenarioLabel": "Scenario",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "cases": [
+      {
+        "industryEn": "Healthcare & Nursing",
+        "industryJp": "Healthcare & Nursing",
+        "imageAlt": "Healthcare and nursing field",
+        "pain": "Is your staff's workload reaching its limit amid chronic shortages?",
+        "scenario": "A 30-person nursing facility. Inquiries from residents' families concentrate during the day, interrupting essential care. An AI agent handles first-line responses, logging, and staff escalation, giving caregivers their time back to focus on care.",
+        "tags": ["Voice AI", "Auto Logging", "Escalation"],
+        "before": "80h/mo",
+        "after": "12h/mo"
+      },
+      {
+        "industryEn": "Construction & Manufacturing",
+        "industryJp": "Construction & Manufacturing",
+        "imageAlt": "Construction and manufacturing field",
+        "pain": "Are you losing hours every day to information gaps between site and office?",
+        "scenario": "A 50-employee metal processing company. Office staff manually transcribed FAX orders into the system, with frequent errors and delays. An AI agent now reads FAX and email orders automatically and reflects them in the production system. Staff only verify.",
+        "tags": ["OCR", "Document AI", "System Integration"],
+        "before": "60h/mo",
+        "after": "8h/mo"
+      },
+      {
+        "industryEn": "Professional Services",
+        "industryJp": "Professional Services",
+        "imageAlt": "Professional services field",
+        "pain": "Are you so buried in paperwork that you can't focus on real work?",
+        "scenario": "A 5-person tax accounting firm. Monthly receipt checks and bookkeeping consumed time, leaving no room for advisory work. An AI agent now automates receipt and invoice reading and journal entry suggestions, freeing staff to focus on review and judgment.",
+        "tags": ["Document AI", "Auto Classification", "Workflow"],
+        "before": "100h/mo",
+        "after": "25h/mo"
+      }
+    ],
+    "bridgeLine1": "The industries differ, but the challenges are similar.",
+    "bridgeLine2Before": "We build ",
+    "bridgeLine2Em": "purpose-built AI agents",
+    "bridgeLine2After": " tailored to each field.",
+    "noteEm": "* The above are hypothetical cases.",
+    "noteRest": "Actual effects vary by business content, scale, and existing system integration. We start every project after pre-deployment hearings to understand the current state and align on targets."
   },
   "solution": {
-    "label": "OUR APPROACH",
-    "title": "We stay with you\nuntil the very end.",
-    "desc": "\"Can we really make AI work for us?\" Your concern is valid. Most AI implementations fail not because of the technology, but because of the lack of post-deployment support.",
-    "point1": "We accompany you from the initial interview all the way to operational adoption",
-    "point2": "Same-day email support — we improve together as you learn",
-    "point3": "We handle the IT subsidy application process so you don't have to"
+    "label": "Our Approach",
+    "headlineBefore": "We build ",
+    "headlineEm": "AI agents",
+    "headlineAfter": " purpose-made for your field, ",
+    "headlineLine2": "ourselves.",
+    "leadLine1": "From hearings to design, build, and operations — we walk with you the entire way.",
+    "leadLine2": "Executives don't need IT expertise. Stay focused on your core business while the field transforms.",
+    "flowLabel": "Process",
+    "flowTitle": "How We Work",
+    "flowSteps": [
+      {
+        "num": "01",
+        "title": "Hearing",
+        "desc": "We listen carefully to your current state and challenges, from a field perspective.",
+        "meta": "Free / 60 min+"
+      },
+      {
+        "num": "02",
+        "title": "Workflow Analysis & Design",
+        "desc": "What can AI automate, and how far? We propose the optimal design.",
+        "meta": "2–3 weeks"
+      },
+      {
+        "num": "03",
+        "title": "AI Agent Build",
+        "desc": "We develop a dedicated AI agent tailored to your field's operations.",
+        "meta": "1–2 months"
+      },
+      {
+        "num": "04",
+        "title": "Operate & Improve",
+        "desc": "Continuous improvement after deployment. We update as your field evolves.",
+        "meta": "Ongoing support"
+      }
+    ],
+    "pricing": {
+      "eyebrow": "Investment",
+      "original": "Standard price ¥900,000+",
+      "prefix": "Effectively",
+      "number": "300",
+      "suffix": "K JPY",
+      "tilde": "+",
+      "noteEm": "Using IT Subsidy",
+      "noteRest1": ", up to 2/3 is covered.",
+      "noteRest2": "Subsidy application support is also provided free of charge.",
+      "includesTitle": "What's Included",
+      "includes": [
+        "Workflow hearing and analysis",
+        "AI agent design and build",
+        "On-site training at deployment",
+        "3 months of post-deployment support",
+        "IT subsidy application assistance"
+      ],
+      "cta": "Request a free consultation"
+    }
   },
-  "cta": {
-    "badge": "Limited Early Adoption Spots",
-    "title": "Be our first\nsuccess story.",
-    "desc": "Start with a free consultation. We'll listen to your operational challenges and work out together whether AI agents can solve them. No cost until you decide to proceed.",
-    "cta_primary": "Book a Free Consultation",
-    "cta_secondary": "Download Brochure"
+  "founder": {
+    "label": "Founder",
+    "headline": "Why we do this.",
+    "nameEn": "Yoshiki Kuno",
+    "nameJp": "Yoshiki Kuno",
+    "role": "Representative Director / Founder & CEO",
+    "imageAlt": "Yoshiki Kuno",
+    "quoteLine1": "Engineering exists to ",
+    "quoteLine2Em": "solve problems on the ground",
+    "quoteLine2After": ".",
+    "bioP1Part1": "I lived in Berlin, Germany for 17 years. I served as ",
+    "bioP1Em1": "lead engineer on international projects at a major SIer",
+    "bioP1Part2": ", developing systems for companies across Europe. The industries I worked in: ",
+    "bioP1Em2": "retail, healthcare, and media",
+    "bioP1Part3": ". I faced field challenges with teams that spoke different languages and worked in different cultures.",
+    "bioP2Part1": "What I came to realize: across industries and countries, the essential challenges in the field are remarkably similar. ",
+    "bioP2Em": "\"People keep doing work that people don't need to do.\"",
+    "bioP2Part2": " This holds in European corporations and in Japanese SMEs alike.",
+    "bioP3": "That's why I want to bring the technology and perspective I built abroad to the SMEs of Japan. Neurosynch began from that conviction."
   },
   "footer": {
     "privacy": "Privacy Policy",

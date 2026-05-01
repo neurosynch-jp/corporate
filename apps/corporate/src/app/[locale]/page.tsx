@@ -1,8 +1,8 @@
 import Hero from '@/components/sections/Hero'
-import Stats from '@/components/sections/Stats'
 import Problem from '@/components/sections/Problem'
+import Target from '@/components/sections/Target'
 import Solution from '@/components/sections/Solution'
-import CtaSection from '@/components/sections/CtaSection'
+import Founder from '@/components/sections/Founder'
 import {getTranslations} from 'next-intl/server'
 
 export default async function HomePage({
@@ -15,14 +15,15 @@ export default async function HomePage({
     return (
         <>
             <Hero
+                eyebrow={t('eyebrow')}
                 headline1={t('headline1')}
                 headline2={t('headline2')}
-                sub={t('sub')}
+                scrollLabel={t('scroll')}
             />
-            <Stats/>
             <Problem/>
+            <Target/>
             <Solution/>
-            <CtaSection/>
+            <Founder/>
         </>
     )
 }
