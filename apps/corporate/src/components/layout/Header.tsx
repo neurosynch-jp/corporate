@@ -1,8 +1,8 @@
 'use client'
 
-import { useTranslations, useLocale } from 'next-intl'
-import { Link, usePathname } from '@/i18n/routing'
-import { useState, useEffect } from 'react'
+import {useTranslations, useLocale} from 'next-intl'
+import {Link, usePathname} from '@/i18n/routing'
+import {useState, useEffect} from 'react'
 
 export default function Header() {
     const t = useTranslations('nav')
@@ -20,13 +20,15 @@ export default function Header() {
     // メニューを開いたときにスクロールを無効化
     useEffect(() => {
         document.body.style.overflow = menuOpen ? 'hidden' : ''
-        return () => { document.body.style.overflow = '' }
+        return () => {
+            document.body.style.overflow = ''
+        }
     }, [menuOpen])
 
     const navLinks = [
-        { href: '/services', label: t('services') },
-        { href: '/company',  label: t('company') },
-        { href: '/careers',  label: t('careers') },
+        {href: '/services', label: t('services')},
+        {href: '/company', label: t('company')},
+        {href: '/careers', label: t('careers')},
     ]
 
     return (
@@ -36,18 +38,18 @@ export default function Header() {
         flex items-center justify-between
         px-6 md:px-16 py-4
         transition-all duration-300
-        bg-white/92 backdrop-blur-md border-b border-[#dde2ea]
+        bg-white backdrop-blur-md border-b border-[#dde2ea]
         ${scrolled ? 'shadow-sm' : ''}
       `}>
                 {/* ロゴ */}
-                <Link href="/" className="no-underline flex items-center">
-                    <svg width="200" height="33" viewBox="0 0 560 56">
+                <Link href="/" className="no-underline flex">
+                    <svg width="200" height="33" viewBox="0 0 560 90">
                         <defs>
                             <mask id="logo-mask">
-                                <rect width="560" height="56" fill="white"/>
-                                <line x1="166" y1="-5" x2="140" y2="61" stroke="black" strokeWidth="7"/>
-                                <line x1="310" y1="-5" x2="284" y2="61" stroke="black" strokeWidth="7"/>
-                                <line x1="454" y1="-5" x2="428" y2="61" stroke="black" strokeWidth="7"/>
+                                <rect width="560" height="90" fill="white"/>
+                                <line x1="166" y1="-5" x2="140" y2="95" stroke="black" strokeWidth="7"/>
+                                <line x1="310" y1="-5" x2="284" y2="95" stroke="black" strokeWidth="7"/>
+                                <line x1="454" y1="-5" x2="428" y2="95" stroke="black" strokeWidth="7"/>
                             </mask>
                         </defs>
                         <text
@@ -55,9 +57,8 @@ export default function Header() {
                             fontWeight="700"
                             fontSize="85"
                             fill="#0f1923"
-                            y="40"
+                            y="70"
                             letterSpacing="12"
-                            mask="url(#logo-mask)"
                         >
                             neurosynch
                         </text>
@@ -65,7 +66,7 @@ export default function Header() {
                 </Link>
 
                 {/* PC：ナビリンク */}
-                <ul className="hidden md:flex gap-10 list-none">
+                <ul className="hidden md:flex gap-10 list-none ml-auto font-bold">
                     {navLinks.map(link => (
                         <li key={link.href}>
                             <Link
@@ -79,14 +80,7 @@ export default function Header() {
                 </ul>
 
                 {/* PC：右側 */}
-                <div className="hidden md:flex items-center gap-4">
-                    <Link
-                        href={pathname}
-                        locale={locale === 'ja' ? 'en' : 'ja'}
-                        className="text-sm text-[#8896aa] hover:text-[#4a5568] transition-colors"
-                    >
-                        {locale === 'ja' ? 'EN' : 'JA'}
-                    </Link>
+                <div className="hidden md:flex items-center gap-4 ml-[32px]">
                     <Link
                         href="/contact"
                         className="
@@ -99,17 +93,17 @@ export default function Header() {
                     >
                         {t('contact')}
                     </Link>
+                    <Link
+                        href={pathname}
+                        locale={locale === 'ja' ? 'en' : 'ja'}
+                        className="text-sm text-[#8896aa] hover:text-[#4a5568] transition-colors"
+                    >
+                        {locale === 'ja' ? 'EN' : 'JA'}
+                    </Link>
                 </div>
 
                 {/* モバイル：右側 */}
                 <div className="flex md:hidden items-center gap-3">
-                    <Link
-                        href={pathname}
-                        locale={locale === 'ja' ? 'en' : 'ja'}
-                        className="text-sm text-[#8896aa]"
-                    >
-                        {locale === 'ja' ? 'EN' : 'JA'}
-                    </Link>
                     {/* ハンバーガーボタン */}
                     <button
                         onClick={() => setMenuOpen(prev => !prev)}
@@ -119,16 +113,24 @@ export default function Header() {
             <span className={`
               block h-0.5 bg-[#0f1923] rounded transition-all duration-300
               ${menuOpen ? 'rotate-45 translate-y-2' : ''}
-            `} />
+            `}/>
                         <span className={`
               block h-0.5 bg-[#0f1923] rounded transition-all duration-300
               ${menuOpen ? 'opacity-0' : ''}
-            `} />
+            `}/>
                         <span className={`
               block h-0.5 bg-[#0f1923] rounded transition-all duration-300
               ${menuOpen ? '-rotate-45 -translate-y-2' : ''}
-            `} />
+            `}/>
                     </button>
+
+                    <Link
+                        href={pathname}
+                        locale={locale === 'ja' ? 'en' : 'ja'}
+                        className="text-sm text-[#8896aa] font-bold"
+                    >
+                        {locale === 'ja' ? 'EN' : 'JA'}
+                    </Link>
                 </div>
             </nav>
 

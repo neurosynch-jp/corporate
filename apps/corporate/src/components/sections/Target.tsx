@@ -27,7 +27,7 @@ export default async function Target() {
     return (
         <section className="target" id="target">
             <div className="target-bg-grid"></div>
-            <div className="bg-text on-dark top-left">FIELD</div>
+            <div className="bg-text on-dark top-right">FIELD</div>
 
             <div className="target-container">
                 <Reveal>
@@ -61,7 +61,6 @@ export default async function Target() {
                                 </div>
                                 <div className="target-card-pain">{c.pain}</div>
                                 <div className="target-card-scenario">
-                                    <div className="target-card-scenario-label">{t('scenarioLabel')}</div>
                                     <p className="target-card-scenario-text">{c.scenario}</p>
                                     <div className="target-card-tags">
                                         {c.tags.map((tag) => (
