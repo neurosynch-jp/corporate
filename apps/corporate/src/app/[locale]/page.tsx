@@ -10,14 +10,14 @@ export default async function HomePage({
                                        }: {
     params: Promise<{ locale: string }>
 }) {
+    const {locale} = await params
     const t = await getTranslations('hero')
 
     return (
         <>
             <Hero
+                locale={locale}
                 eyebrow={t('eyebrow')}
-                headline1={t('headline1')}
-                headline2={t('headline2')}
                 scrollLabel={t('scroll')}
             />
             <Problem/>
